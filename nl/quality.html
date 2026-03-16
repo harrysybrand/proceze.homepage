@@ -46,7 +46,8 @@
         .hero-bg { background:#0a0a0a; position:relative; overflow:hidden; }
         .hero-bg::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 50% 40%,rgba(240,90,40,.18) 0%,transparent 60%), radial-gradient(ellipse 60% 80% at 20% 60%,rgba(12,126,245,.12) 0%,transparent 55%), radial-gradient(ellipse 50% 50% at 80% 70%,rgba(34,197,94,.1) 0%,transparent 50%); pointer-events:none; }
         .hero-bg::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
-        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .grid-pattern { position:relative; }
+        .grid-pattern .grid-overlay { position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:60px 60px; z-index:1; pointer-events:none; }
         .nav-header { transition:background .3s ease,border-color .3s ease; }
         .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
         .nav-scrolled a:not(.btn-cta) { color:#111!important; }
@@ -89,6 +90,7 @@
 
 <!-- HERO — What if -->
 <section class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
+    <div class="grid-overlay"></div>
     <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-24 md:pt-52 md:pb-44 min-h-[90vh] flex flex-col justify-center text-center">
         <p class="text-sm sm:text-base font-semibold text-accent tracking-wide uppercase mb-4 sm:mb-6">Kwaliteit binnen handbereik</p>
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">Wat als compliance en kwaliteit<br>je bedrijf daadwerkelijk lieten groeien?</h1>

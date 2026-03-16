@@ -40,7 +40,8 @@
         .hero-safety { background:linear-gradient(160deg,#0a0a0a 0%,#1a0f0a 40%,#1a0a0a 70%,#0a0a0a 100%); position:relative; overflow:hidden; }
         .hero-safety::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 40% 50%,rgba(240,90,40,.18) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 75% 60%,rgba(234,179,8,.12) 0%,transparent 50%); pointer-events:none; }
         .hero-safety::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
-        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .grid-pattern { position:relative; }
+        .grid-pattern .grid-overlay { position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:60px 60px; z-index:1; pointer-events:none; }
         .nav-header { transition:background .3s ease,border-color .3s ease; }
         .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
         .nav-scrolled a:not(.btn-cta) { color:#111!important; }
@@ -67,6 +68,7 @@
 
 <!-- HERO -->
 <section class="hero-safety grid-pattern relative" style="background:linear-gradient(160deg,#0a0a0a 0%,#1a0f0a 40%,#1a0a0a 70%,#0a0a0a 100%);">
+    <div class="grid-overlay"></div>
     <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-40 min-h-[85vh] flex flex-col justify-center text-center">
         <div class="inline-flex items-center gap-2 mb-6 justify-center">
             <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center"><i class="fas fa-hard-hat text-amber-400 text-sm"></i></div>
