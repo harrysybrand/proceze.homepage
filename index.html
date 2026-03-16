@@ -61,38 +61,26 @@
         .timeline-step { position:relative; }
         .timeline-step::before { content:''; position:absolute; left:24px; top:60px; bottom:-40px; width:1px; background:#e5e7eb; }
         .timeline-step:last-child::before { display:none; }
+        /* Nav dropdown */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-menu { display:none; position:absolute; top:100%%; left:50%%; transform:translateX(-50%%); padding-top:12px; min-width:220px; z-index:60; }
+        .nav-dropdown-menu-inner { background:#111; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+        .nav-scrolled .nav-dropdown-menu-inner { background:#fff; border-color:#e5e7eb; box-shadow:0 8px 32px rgba(0,0,0,.1); }
+        .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+        .nav-dropdown-menu a { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:13px; color:rgba(255,255,255,.6); transition:all .15s ease; }
+        .nav-dropdown-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
+        .nav-scrolled .nav-dropdown-menu a { color:#666; }
+        .nav-scrolled .nav-dropdown-menu a:hover { background:#f5f5f5; color:#111; }
+        .nav-dropdown-menu .dd-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
-<!-- NAV -->
-<nav id="mainNav" class="nav-header fixed top-0 w-full z-50 bg-transparent border-b border-transparent">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16">
-        <a href="/" class="text-xl font-bold text-white tracking-tight">proceze.</a>
-        <div class="hidden md:flex items-center gap-8">
-            <a href="#features" class="text-sm text-white/70 hover:text-white transition">Features</a>
-            <a href="#amy" class="text-sm text-white/70 hover:text-white transition">Amy AI</a>
-            <a href="quality.html" class="text-sm text-white/70 hover:text-white transition">Quality</a>
-            <a href="#compare" class="text-sm text-white/70 hover:text-white transition">Why Proceze</a>
-        </div>
-        <div class="hidden md:flex items-center gap-4">
-            <a href="#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-orange-600 transition">Get Started <i class="fas fa-chevron-right text-xs"></i></a>
-        </div>
-        <button id="mobileMenuBtn" class="md:hidden text-white"><i class="fas fa-bars text-lg"></i></button>
-    </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/10">
-        <div class="px-5 py-4 space-y-3">
-            <a href="#features" class="block text-sm text-white/80 hover:text-white py-1">Features</a>
-            <a href="#amy" class="block text-sm text-white/80 hover:text-white py-1">Amy AI</a>
-            <a href="quality.html" class="block text-sm text-white/80 hover:text-white py-1">Quality</a>
-            <a href="#compare" class="block text-sm text-white/80 hover:text-white py-1">Why Proceze</a>
-            <a href="#cta" class="block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-orange-600 transition mt-2">Get Started</a>
-        </div>
-    </div>
-</nav>
+<!-- NAV (shared) -->
+<div id="nav-placeholder"></div>
 
 <!-- HERO -->
-<section class="hero-bg grid-pattern relative">
+<section class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
     <!-- Floating Amy messages -->
     <div class="amy-float hidden sm:block" style="top:22%;left:6%;font-size:11px;" data-float-delay="800"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>Your ISO 9001 score is 94%</div>
     <div class="amy-float hidden sm:block" style="top:18%;right:8%;font-size:13px;" data-float-delay="1600"><i class="fas fa-robot text-accent text-[10px] mr-1.5"></i>2 CAPAs need attention</div>
@@ -526,7 +514,7 @@
 </section>
 
 <!-- CTA -->
-<section id="cta" class="hero-bg grid-pattern relative">
+<section id="cta" class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
     <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
         <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Start building compliance that actually works</h2>
         <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Get compliant faster, reduce manual work, and give your team a system they can actually use. Start with your first procedure today.</p>
@@ -534,65 +522,11 @@
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-            <div class="col-span-2 md:col-span-1">
-                <span class="text-xl font-bold tracking-tight">proceze.</span>
-                <p class="mt-3 text-xs sm:text-sm text-white/50 leading-relaxed">Intelligent compliance & quality workflows for modern teams.</p>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Product</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="#features" class="text-white/50 hover:text-white transition">Features</a></li>
-                    <li><a href="#amy" class="text-white/50 hover:text-white transition">Amy AI</a></li>
-                    <li><a href="quality.html" class="text-white/50 hover:text-white transition">Quality</a></li>
-                    <li><a href="#compliance" class="text-white/50 hover:text-white transition">Standards</a></li>
-                    <li><a href="#compare" class="text-white/50 hover:text-white transition">Why Proceze</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Use Cases</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="use-case-certification.html" class="text-white/50 hover:text-white transition">Certification & Standards</a></li>
-                    <li><a href="use-case-safety.html" class="text-white/50 hover:text-white transition">Safety Management</a></li>
-                    <li><a href="use-case-quality.html" class="text-white/50 hover:text-white transition">Quality Management</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Company</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Support</a></li>
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Sales</a></li>
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Contact</a></li>
-                </ul>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4 mt-6">Follow us</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a>
-                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-twitter text-lg"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-white/40">&copy; 2025 Proceze. All rights reserved.</div>
-    </div>
-</footer>
+<!-- FOOTER (shared) -->
+<div id="footer-placeholder"></div>
 
+<script src="includes.js"></script>
 <script>
-    // Mobile menu
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-        link.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
-    });
-
-    // Nav scroll effect
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('nav-scrolled', window.scrollY > 80);
-    });
-
     // Fade-in on scroll
     const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

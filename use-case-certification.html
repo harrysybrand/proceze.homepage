@@ -28,6 +28,17 @@
         .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
         .fade-in.visible { opacity:1; transform:translateY(0); }
         .mockup-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.06); overflow:hidden; }
+        /* Nav dropdown */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-menu { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:12px; min-width:220px; z-index:60; }
+        .nav-dropdown-menu-inner { background:#111; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+        .nav-scrolled .nav-dropdown-menu-inner { background:#fff; border-color:#e5e7eb; box-shadow:0 8px 32px rgba(0,0,0,.1); }
+        .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+        .nav-dropdown-menu a { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:13px; color:rgba(255,255,255,.6); transition:all .15s ease; }
+        .nav-dropdown-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
+        .nav-scrolled .nav-dropdown-menu a { color:#666; }
+        .nav-scrolled .nav-dropdown-menu a:hover { background:#f5f5f5; color:#111; }
+        .nav-dropdown-menu .dd-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; }
         .step-line { position:relative; }
         .step-line::after { content:''; position:absolute; left:28px; top:72px; bottom:-32px; width:2px; background:linear-gradient(to bottom,#e5e7eb,transparent); }
         .step-line:last-child::after { display:none; }
@@ -35,34 +46,11 @@
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
-<!-- NAV -->
-<nav id="mainNav" class="nav-header fixed top-0 w-full z-50 bg-transparent border-b border-transparent">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16">
-        <a href="index.html" class="text-xl font-bold text-white tracking-tight">proceze.</a>
-        <div class="hidden md:flex items-center gap-8">
-            <a href="index.html#features" class="text-sm text-white/70 hover:text-white transition">Features</a>
-            <a href="index.html#amy" class="text-sm text-white/70 hover:text-white transition">Amy AI</a>
-            <a href="quality.html" class="text-sm text-white/70 hover:text-white transition">Quality</a>
-            <a href="index.html#compare" class="text-sm text-white/70 hover:text-white transition">Why Proceze</a>
-        </div>
-        <div class="hidden md:flex items-center gap-4">
-            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-orange-600 transition">Get Started <i class="fas fa-chevron-right text-xs"></i></a>
-        </div>
-        <button id="mobileMenuBtn" class="md:hidden text-white"><i class="fas fa-bars text-lg"></i></button>
-    </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/10">
-        <div class="px-5 py-4 space-y-3">
-            <a href="index.html#features" class="block text-sm text-white/80 hover:text-white py-1">Features</a>
-            <a href="index.html#amy" class="block text-sm text-white/80 hover:text-white py-1">Amy AI</a>
-            <a href="quality.html" class="block text-sm text-white/80 hover:text-white py-1">Quality</a>
-            <a href="index.html#compare" class="block text-sm text-white/80 hover:text-white py-1">Why Proceze</a>
-            <a href="index.html#cta" class="block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-orange-600 transition mt-2">Get Started</a>
-        </div>
-    </div>
-</nav>
+<!-- NAV (shared) -->
+<div id="nav-placeholder"></div>
 
 <!-- HERO -->
-<section class="hero-cert grid-pattern relative">
+<section class="hero-cert grid-pattern relative" style="background:linear-gradient(160deg,#0a0a0a 0%,#0a1020 40%,#0a0a1a 70%,#0a0a0a 100%);">
     <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-40 min-h-[85vh] flex flex-col justify-center text-center">
         <div class="inline-flex items-center gap-2 mb-6 justify-center">
             <div class="w-8 h-8 rounded-lg bg-pz-500/20 flex items-center justify-center"><i class="fas fa-certificate text-pz-500 text-sm"></i></div>
@@ -182,7 +170,7 @@
 </section>
 
 <!-- CTA -->
-<section class="hero-cert grid-pattern relative">
+<section class="hero-cert grid-pattern relative" style="background:linear-gradient(160deg,#0a0a0a 0%,#0a1020 40%,#0a0a1a 70%,#0a0a0a 100%);">
     <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
         <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Pass your next audit with confidence</h2>
         <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Stop scrambling before every audit. Build a system that keeps you audit-ready every single day.</p>
@@ -193,54 +181,11 @@
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-            <div class="col-span-2 md:col-span-1">
-                <span class="text-xl font-bold tracking-tight">proceze.</span>
-                <p class="mt-3 text-xs sm:text-sm text-white/50 leading-relaxed">Intelligent compliance & quality workflows for modern teams.</p>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Product</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="index.html#features" class="text-white/50 hover:text-white transition">Features</a></li>
-                    <li><a href="index.html#amy" class="text-white/50 hover:text-white transition">Amy AI</a></li>
-                    <li><a href="quality.html" class="text-white/50 hover:text-white transition">Quality</a></li>
-                    <li><a href="index.html#compare" class="text-white/50 hover:text-white transition">Why Proceze</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Use Cases</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="use-case-certification.html" class="text-white/50 hover:text-white transition">Certification & Standards</a></li>
-                    <li><a href="use-case-safety.html" class="text-white/50 hover:text-white transition">Safety Management</a></li>
-                    <li><a href="use-case-quality.html" class="text-white/50 hover:text-white transition">Quality Management</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Company</h4>
-                <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Support</a></li>
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Sales</a></li>
-                    <li><a href="#" class="text-white/50 hover:text-white transition">Contact</a></li>
-                </ul>
-                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4 mt-6">Follow us</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a>
-                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-twitter text-lg"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-white/40">&copy; 2025 Proceze. All rights reserved.</div>
-    </div>
-</footer>
+<!-- FOOTER (shared) -->
+<div id="footer-placeholder"></div>
 
+<script src="includes.js"></script>
 <script>
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
-    document.querySelectorAll('#mobileMenu a').forEach(l => { l.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')); });
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => { nav.classList.toggle('nav-scrolled', window.scrollY > 80); });
     const fadeObs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
 </script>
