@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- Root -->
+    <url>
+        <loc>https://proceze.com/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/index.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/index.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://proceze.com/en/index.html"/>
+    </url>
+    <!-- English pages -->
+    <url>
+        <loc>https://proceze.com/en/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/index.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/index.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/en/quality.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/quality.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/quality.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/en/use-case-certification.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-certification.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-certification.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/en/use-case-safety.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-safety.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-safety.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/en/use-case-quality.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-quality.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-quality.html"/>
+    </url>
+    <!-- Dutch pages -->
+    <url>
+        <loc>https://proceze.com/nl/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/index.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/index.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/nl/quality.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/quality.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/quality.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/nl/use-case-certification.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-certification.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-certification.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/nl/use-case-safety.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-safety.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-safety.html"/>
+    </url>
+    <url>
+        <loc>https://proceze.com/nl/use-case-quality.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-quality.html"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-quality.html"/>
+    </url>
+</urlset>

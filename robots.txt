@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proceze.com/sitemap.xml
+
+# Disallow backup and system files
+Disallow: /*.bak$
+Disallow: /cgi-bin/

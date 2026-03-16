@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See how Proceze turns every procedure execution into measurable quality insights. Real-time dashboards, CAPA workflows, training management and AI-powered quality analysis.">
+    <meta name="keywords" content="quality management system, continuous improvement, CAPA workflow, quality dashboard, training management, quality control software">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://proceze.com/en/quality.html">
+    <link rel="alternate" hreflang="en" href="https://proceze.com/en/quality.html">
+    <link rel="alternate" hreflang="nl" href="https://proceze.com/nl/quality.html">
+    <link rel="alternate" hreflang="x-default" href="https://proceze.com/en/quality.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proceze Quality — What If Compliance Actually Grew Your Business?">
+    <meta property="og:description" content="Turn compliance data into operational excellence. Real-time quality dashboards, structured CAPA workflows, and AI-powered insights.">
+    <meta property="og:url" content="https://proceze.com/en/quality.html">
+    <meta property="og:site_name" content="Proceze">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Proceze Quality — What If Compliance Actually Grew Your Business?">
+    <meta name="twitter:description" content="Turn compliance data into operational excellence. Real-time quality dashboards, structured CAPA workflows, and AI-powered insights.">
+    <title>Proceze — Quality Management | Turn Compliance Data Into Business Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pz': { 500: '#0c7ef5', 600: '#0062d1' },
+                        'accent': '#F05A28',
+                        'dark': '#0a0a0a',
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+        .hero-bg { background:#0a0a0a; position:relative; overflow:hidden; }
+        .hero-bg::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 50% 40%,rgba(240,90,40,.18) 0%,transparent 60%), radial-gradient(ellipse 60% 80% at 20% 60%,rgba(12,126,245,.12) 0%,transparent 55%), radial-gradient(ellipse 50% 50% at 80% 70%,rgba(34,197,94,.1) 0%,transparent 50%); pointer-events:none; }
+        .hero-bg::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
+        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .nav-header { transition:background .3s ease,border-color .3s ease; }
+        .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
+        .nav-scrolled a:not(.btn-cta) { color:#111!important; }
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+        /* Cycle animation */
+        .cycle-node { opacity:.4; transform:scale(.92); transition:all .5s ease; }
+        .cycle-node.active { opacity:1; transform:scale(1); }
+        .cycle-connector { stroke-dasharray:8 4; stroke-dashoffset:0; animation:dashFlow 1.5s linear infinite; }
+        @keyframes dashFlow { to { stroke-dashoffset:-24; } }
+        /* Amy glow */
+        .amy-glow { position:relative; border-radius:1.5rem; background:linear-gradient(135deg,#0c7ef5,#F05A28,#22c55e,#0c7ef5); background-size:300% 300%; animation:amyBorderShift 6s ease infinite; padding:2px; }
+        @media (max-width:639px) { .amy-glow { padding:1.5px; } }
+        @keyframes amyBorderShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+        .typing-cursor { display:inline-block; width:2px; height:1em; background:#F05A28; margin-left:2px; animation:blink .8s step-end infinite; vertical-align:text-bottom; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        .amy-bubble { opacity:0; transform:translateY(12px); transition:opacity .4s ease,transform .4s ease; }
+        .amy-bubble.show { opacity:1; transform:translateY(0); }
+        .pulse-ring { animation:pulseRing 2s cubic-bezier(0,0,.2,1) infinite; }
+        @keyframes pulseRing { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(2.2);opacity:0} }
+        /* Nav dropdown */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-menu { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:12px; min-width:220px; z-index:60; }
+        .nav-dropdown-menu-inner { background:#111; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+        .nav-scrolled .nav-dropdown-menu-inner { background:#fff; border-color:#e5e7eb; box-shadow:0 8px 32px rgba(0,0,0,.1); }
+        .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+        .nav-dropdown-menu a { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:13px; color:rgba(255,255,255,.6); transition:all .15s ease; }
+        .nav-dropdown-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
+        .nav-scrolled .nav-dropdown-menu a { color:#666; }
+        .nav-scrolled .nav-dropdown-menu a:hover { background:#f5f5f5; color:#111; }
+        .nav-dropdown-menu .dd-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; }
+        /* Mock-up shadow */
+        .mockup-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.06); overflow:hidden; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV (shared) -->
+<div id="nav-placeholder"></div>
+
+<!-- HERO — What if -->
+<section class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-24 md:pt-52 md:pb-44 min-h-[90vh] flex flex-col justify-center text-center">
+        <p class="text-sm sm:text-base font-semibold text-accent tracking-wide uppercase mb-4 sm:mb-6">Quality at your fingertips</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">What if compliance and quality<br>actually grew your business?</h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">Most companies treat compliance as a cost center. But the data you collect during compliance — every procedure execution, every audit, every corrective action — is a goldmine for operational improvement. Proceze turns that data into visible, actionable insights.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base w-full sm:w-auto justify-center">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">Most companies treat compliance and quality as two separate things. They're not.</h2>
+        <p class="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Compliance sets the <strong class="text-gray-900">minimum standard</strong> — it tells you what you need to do. Quality management is what happens when you actually do it, measure it, and improve it. The companies that understand this don't just pass audits — they run better, safer, more profitable operations.</p>
+        <p class="mt-4 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze connects both. Every compliance action generates quality data. Every quality insight improves your compliance posture. It's one loop — and it starts the moment your team opens the system.</p>
+    </div>
+</section>
+
+<!-- THE CONTINUOUS IMPROVEMENT CYCLE -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">The loop that makes your operation better every day</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">This isn't a one-time setup. Every cycle your team runs generates data that feeds back into improvement. It's automatic, visible and continuous.</p>
+        </div>
+        <div class="mt-14 sm:mt-16 md:mt-20 max-w-3xl mx-auto" id="cycleContainer">
+            <!-- Circular cycle — 6 steps -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="1">
+                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-file-import text-accent text-xl"></i></div>
+                    <div class="text-xs font-bold text-accent uppercase tracking-wider mb-1">Step 1</div>
+                    <h4 class="text-sm font-bold text-gray-900">Define procedures</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">Upload a standard or build from scratch. AI helps structure everything.</p>
+                </div>
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="2">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-play-circle text-pz-500 text-xl"></i></div>
+                    <div class="text-xs font-bold text-pz-500 uppercase tracking-wider mb-1">Step 2</div>
+                    <h4 class="text-sm font-bold text-gray-900">Execute & collect data</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">Teams follow workflows. Every answer, photo and signature is logged.</p>
+                </div>
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="3">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-pie text-purple-600 text-xl"></i></div>
+                    <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">Step 3</div>
+                    <h4 class="text-sm font-bold text-gray-900">Analyze & detect</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">See which processes fail, where bottlenecks are, and what needs attention.</p>
+                </div>
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="4">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-wrench text-amber-600 text-xl"></i></div>
+                    <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Step 4</div>
+                    <h4 class="text-sm font-bold text-gray-900">Correct & improve</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">CAPAs drive real change — update procedures, assign tasks, verify effectiveness.</p>
+                </div>
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="5">
+                    <div class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-gauge-high text-green-600 text-xl"></i></div>
+                    <div class="text-xs font-bold text-green-600 uppercase tracking-wider mb-1">Step 5</div>
+                    <h4 class="text-sm font-bold text-gray-900">Optimize</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">Fewer errors, faster execution, better compliance scores. Measurable improvement.</p>
+                </div>
+                <div class="cycle-node text-center p-5 rounded-2xl border border-gray-200 bg-white" data-cycle="6">
+                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-rotate text-accent text-xl"></i></div>
+                    <div class="text-xs font-bold text-accent uppercase tracking-wider mb-1">Repeat</div>
+                    <h4 class="text-sm font-bold text-gray-900">The cycle continues</h4>
+                    <p class="text-xs text-gray-400 mt-1 leading-relaxed">Every iteration makes your operation better. Compliance is never "done" — it's always improving.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT PROCEZE MAKES VISIBLE — Mock-ups -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">What Proceze makes visible</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Every module in Proceze generates data that feeds into your quality insights. Here's what leadership sees — at a glance, any time.</p>
+        </div>
+
+        <!-- Mock-up 1: Procedure execution insights -->
+        <div class="mt-14 sm:mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center"><i class="fas fa-chart-bar text-accent text-sm"></i></div><span class="text-xs font-bold text-accent uppercase tracking-wider">Process intelligence</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">See which processes fail — and why</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Every time your team executes a procedure, the system records what passed, what failed, and how long each step took. Over time, patterns emerge. You see exactly where your operation breaks down — before it costs you money.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Failure rates per procedure and step</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Average execution time and bottleneck detection</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Trend analysis: improving or declining over time</span></li>
+                </ul>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between">
+                    <h4 class="text-sm font-bold text-gray-900">Procedure Performance</h4>
+                    <span class="text-[10px] sm:text-xs text-gray-400">Last 30 days</span>
+                </div>
+                <div class="p-4 sm:p-5 space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-1.5"><span class="font-semibold text-gray-700">ISO 9001 Internal Audit</span><span class="text-green-600 font-semibold">98% pass</span></div>
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width:98%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-1.5"><span class="font-semibold text-gray-700">Equipment Calibration</span><span class="text-green-600 font-semibold">94% pass</span></div>
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width:94%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-1.5"><span class="font-semibold text-gray-700">Incoming Goods Inspection</span><span class="text-amber-500 font-semibold">78% pass</span></div>
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full" style="width:78%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-1.5"><span class="font-semibold text-gray-700">Fire Safety Check</span><span class="text-red-500 font-semibold">62% pass</span></div>
+                        <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-red-400 rounded-full" style="width:62%"></div></div>
+                    </div>
+                </div>
+                <div class="p-4 sm:p-5 border-t border-gray-100 bg-red-50/50">
+                    <div class="flex items-start gap-2.5">
+                        <div class="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-red-500 text-[9px]"></i></div>
+                        <div>
+                            <p class="text-xs font-bold text-red-700">Attention needed</p>
+                            <p class="text-xs text-red-600/70 mt-0.5">Fire Safety Check has failed 38% of executions. Step 4 ("Emergency exit inspection") is the primary failure point.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mock-up 2: CAPA trend -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1 mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between">
+                    <h4 class="text-sm font-bold text-gray-900">CAPA Trend</h4>
+                    <span class="text-[10px] sm:text-xs text-gray-400">2025</span>
+                </div>
+                <div class="p-4 sm:p-5">
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-5">
+                        <div class="text-center p-3 rounded-xl bg-green-50">
+                            <p class="text-2xl font-black text-green-600">24</p>
+                            <p class="text-[10px] sm:text-xs text-green-600/70 font-semibold mt-0.5">Resolved</p>
+                        </div>
+                        <div class="text-center p-3 rounded-xl bg-amber-50">
+                            <p class="text-2xl font-black text-amber-600">3</p>
+                            <p class="text-[10px] sm:text-xs text-amber-600/70 font-semibold mt-0.5">In progress</p>
+                        </div>
+                        <div class="text-center p-3 rounded-xl bg-red-50">
+                            <p class="text-2xl font-black text-red-600">1</p>
+                            <p class="text-[10px] sm:text-xs text-red-600/70 font-semibold mt-0.5">Overdue</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50">
+                            <div class="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"></div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-xs font-semibold text-gray-900 truncate">Supplier defect — raw material batch #4021</p>
+                                <p class="text-[10px] text-gray-400 mt-0.5">Overdue · Assigned to Mark</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full flex-shrink-0">Critical</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50">
+                            <div class="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0"></div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-xs font-semibold text-gray-900 truncate">Temperature deviation — cold storage unit 3</p>
+                                <p class="text-[10px] text-gray-400 mt-0.5">In progress · Root cause analysis</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full flex-shrink-0">High</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center"><i class="fas fa-clipboard-list text-purple-600 text-sm"></i></div><span class="text-xs font-bold text-purple-600 uppercase tracking-wider">Corrective actions</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Every incident drives real change</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">CAPAs in Proceze aren't just forms to fill in. They follow a structured workflow: register, analyze root cause, propose a solution, update procedures, assign tasks, and verify effectiveness. Every resolved CAPA makes your operation measurably better.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">6-step structured CAPA workflow with task tracking</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Direct link between incidents and procedure updates</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Effectiveness verification before closure</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mock-up 3: Training & qualification -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center"><i class="fas fa-graduation-cap text-pz-500 text-sm"></i></div><span class="text-xs font-bold text-pz-500 uppercase tracking-wider">Workforce qualification</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">The right people on the right tasks</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Proceze tracks training records, certifications and qualifications per employee. Before someone starts a procedure, the system checks if they're qualified. Expired training? The team lead sees it immediately. No more guessing who can do what.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Per-employee qualification profile</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Automatic alerts for expiring training</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Qualification check before procedure execution</span></li>
+                </ul>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-pz-500 flex items-center justify-center text-white text-sm font-bold">MK</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900">Mark Kowalski</h4>
+                            <p class="text-xs text-gray-400">Production Lead · Department A</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 sm:p-5">
+                    <div class="grid grid-cols-3 gap-3 mb-4">
+                        <div class="text-center p-2.5 rounded-lg bg-green-50"><p class="text-lg font-black text-green-600">6</p><p class="text-[10px] text-green-600/70 font-semibold">Active</p></div>
+                        <div class="text-center p-2.5 rounded-lg bg-red-50"><p class="text-lg font-black text-red-600">1</p><p class="text-[10px] text-red-600/70 font-semibold">Expired</p></div>
+                        <div class="text-center p-2.5 rounded-lg bg-blue-50"><p class="text-lg font-black text-pz-500">2</p><p class="text-[10px] text-pz-500/70 font-semibold">Planned</p></div>
+                    </div>
+                    <p class="text-xs font-semibold text-gray-700 mb-2.5">Procedure Qualifications</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs p-2 rounded-lg bg-gray-50"><span class="text-gray-700">ISO 9001 Internal Audit</span><span class="text-green-600 font-semibold flex items-center gap-1"><i class="fas fa-check text-[9px]"></i> Qualified</span></div>
+                        <div class="flex items-center justify-between text-xs p-2 rounded-lg bg-gray-50"><span class="text-gray-700">Equipment Calibration</span><span class="text-green-600 font-semibold flex items-center gap-1"><i class="fas fa-check text-[9px]"></i> Qualified</span></div>
+                        <div class="flex items-center justify-between text-xs p-2 rounded-lg bg-red-50"><span class="text-gray-700">Fire Safety Check</span><span class="text-red-600 font-semibold flex items-center gap-1"><i class="fas fa-times text-[9px]"></i> Expired</span></div>
+                        <div class="flex items-center justify-between text-xs p-2 rounded-lg bg-gray-50"><span class="text-gray-700">Incoming Goods Inspection</span><span class="text-green-600 font-semibold flex items-center gap-1"><i class="fas fa-check text-[9px]"></i> Qualified</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mock-up 4: Risk register -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1 mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between">
+                    <h4 class="text-sm font-bold text-gray-900">Risk Overview</h4>
+                    <span class="text-[10px] sm:text-xs font-semibold text-green-600 flex items-center gap-1"><i class="fas fa-shield-halved text-[9px]"></i> 2 escalations this month</span>
+                </div>
+                <div class="p-4 sm:p-5">
+                    <!-- Risk matrix mini -->
+                    <div class="grid grid-cols-4 gap-1 mb-4">
+                        <div class="text-center p-2 rounded bg-red-500 text-white text-[10px] font-bold">3</div>
+                        <div class="text-center p-2 rounded bg-red-400 text-white text-[10px] font-bold">1</div>
+                        <div class="text-center p-2 rounded bg-amber-400 text-white text-[10px] font-bold">0</div>
+                        <div class="text-center p-2 rounded bg-amber-300 text-white text-[10px] font-bold">0</div>
+                        <div class="text-center p-2 rounded bg-red-400 text-white text-[10px] font-bold">2</div>
+                        <div class="text-center p-2 rounded bg-amber-400 text-white text-[10px] font-bold">5</div>
+                        <div class="text-center p-2 rounded bg-amber-300 text-white text-[10px] font-bold">3</div>
+                        <div class="text-center p-2 rounded bg-green-300 text-white text-[10px] font-bold">1</div>
+                        <div class="text-center p-2 rounded bg-amber-400 text-white text-[10px] font-bold">1</div>
+                        <div class="text-center p-2 rounded bg-amber-300 text-white text-[10px] font-bold">4</div>
+                        <div class="text-center p-2 rounded bg-green-400 text-white text-[10px] font-bold">6</div>
+                        <div class="text-center p-2 rounded bg-green-500 text-white text-[10px] font-bold">8</div>
+                        <div class="text-center p-2 rounded bg-amber-300 text-white text-[10px] font-bold">0</div>
+                        <div class="text-center p-2 rounded bg-green-300 text-white text-[10px] font-bold">2</div>
+                        <div class="text-center p-2 rounded bg-green-400 text-white text-[10px] font-bold">5</div>
+                        <div class="text-center p-2 rounded bg-green-500 text-white text-[10px] font-bold">12</div>
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] text-gray-400 mb-4">
+                        <span>Low impact →</span><span>High impact</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-red-50">
+                            <div class="w-6 h-6 rounded bg-red-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-exclamation text-white text-[9px]"></i></div>
+                            <div class="flex-1"><p class="text-xs font-semibold text-gray-900">Chemical storage ventilation failure</p><p class="text-[10px] text-gray-400">Escalated from procedure step · Critical</p></div>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 rounded-lg bg-amber-50">
+                            <div class="w-6 h-6 rounded bg-amber-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-exclamation text-white text-[9px]"></i></div>
+                            <div class="flex-1"><p class="text-xs font-semibold text-gray-900">Forklift maintenance overdue</p><p class="text-[10px] text-gray-400">Escalated from procedure step · High</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center"><i class="fas fa-triangle-exclamation text-red-500 text-sm"></i></div><span class="text-xs font-bold text-red-500 uppercase tracking-wider">Risk intelligence</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Risks don't hide in Proceze</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">When a procedure step fails a critical threshold, the system automatically creates a risk escalation. No manual reporting needed. Leadership sees risks the moment they happen — categorized, prioritized and linked to the source procedure.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Automatic risk escalation from procedure failures</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Visual risk matrix with impact/probability scoring</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Direct link to CAPAs for mitigation</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BUSINESS IMPACT -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">The business impact of quality visibility</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">When you can see your entire operation in real time, the results speak for themselves.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5"><i class="fas fa-arrow-down text-green-600 text-xl"></i></div>
+                <h4 class="text-lg font-black text-gray-900">Fewer errors</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Standardized procedures with built-in logic reduce human error. Every step is guided, verified and logged.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5"><i class="fas fa-handshake text-pz-500 text-xl"></i></div>
+                <h4 class="text-lg font-black text-gray-900">Faster deals</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Enterprise customers ask for your compliance status. When you can show it in seconds, contracts close faster.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-5"><i class="fas fa-hard-hat text-amber-600 text-xl"></i></div>
+                <h4 class="text-lg font-black text-gray-900">Safer workplace</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Safety escalations surface immediately. Critical procedure failures trigger instant alerts — not incident reports weeks later.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mx-auto mb-5"><i class="fas fa-arrow-trend-up text-purple-600 text-xl"></i></div>
+                <h4 class="text-lg font-black text-gray-900">Higher margins</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Optimized processes mean less waste, fewer reworks and faster throughput. Quality isn't a cost — it's a profit driver.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AMY FOR QUALITY — Chat demo -->
+<section class="relative py-16 sm:py-24 md:py-36 overflow-hidden" style="background:#0a0a0a;">
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 50% at 30% 50%,rgba(12,126,245,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 70% at 75% 60%,rgba(240,90,40,.15) 0%,transparent 55%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 mb-6 justify-center">
+                <span class="relative flex h-3 w-3">
+                    <span class="pulse-ring absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                </span>
+                <span class="text-sm font-semibold text-accent tracking-wide uppercase">Amy & Quality</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.08]">Amy doesn't just do compliance. She does quality.</h2>
+            <p class="mt-6 text-lg text-white/60 leading-relaxed">Ask Amy about process performance, failure patterns, training gaps, risk trends — she queries your entire system and gives you the answer in seconds.</p>
+        </div>
+        <div class="mt-14 max-w-2xl mx-auto amy-glow rounded-3xl">
+            <div class="bg-[#111] rounded-[calc(1.5rem-2px)] p-5 sm:p-8">
+                <div class="flex items-center gap-3 mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
+                    <div class="relative">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center"><i class="fas fa-robot text-white text-xs sm:text-sm"></i></div>
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-green-500 border-2 border-[#111]"></div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-white">Amy</p>
+                        <p class="text-[11px] sm:text-xs text-white/40">Compliance & Quality AI Agent</p>
+                    </div>
+                </div>
+                <div class="space-y-3 sm:space-y-4" id="amyQualityDemo">
+                    <div class="flex justify-end">
+                        <div class="bg-accent/10 border border-accent/20 rounded-2xl rounded-br-md px-3.5 py-2 sm:px-4 sm:py-2.5 max-w-[80%]">
+                            <p class="text-xs sm:text-sm text-white/80">Which procedure fails the most this quarter?</p>
+                        </div>
+                    </div>
+                    <div class="amy-bubble flex gap-2.5 sm:gap-3" data-delay="600">
+                        <div class="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center mt-1"><i class="fas fa-robot text-white text-[8px] sm:text-[10px]"></i></div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-3.5 py-2.5 sm:px-4 sm:py-3 max-w-[85%]">
+                            <p class="text-xs sm:text-sm text-white/70 leading-relaxed"><span class="text-accent font-semibold">Fire Safety Check</span> has the highest failure rate at <span class="text-red-400 font-bold">38%</span> over the last 90 days.</p>
+                            <div class="mt-2.5 space-y-1.5">
+                                <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Primary failure point</span><span class="text-white/70 font-semibold">Step 4 — Emergency exit inspection</span></div>
+                                <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Total executions</span><span class="text-white/70 font-semibold">16 this quarter</span></div>
+                                <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Related CAPAs</span><span class="text-amber-400 font-semibold">1 open</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amy-bubble flex gap-2.5 sm:gap-3" data-delay="1400">
+                        <div class="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center mt-1"><i class="fas fa-robot text-white text-[8px] sm:text-[10px]"></i></div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-3.5 py-2.5 sm:px-4 sm:py-3 max-w-[85%]">
+                            <p class="text-xs sm:text-sm text-white/70 leading-relaxed">I'd recommend reviewing the procedure and checking if Mark Kowalski's <span class="text-red-400 font-semibold">expired fire safety training</span> is related. Want me to open the CAPA?<span class="typing-cursor"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Ready to see quality and compliance work together?</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Stop treating compliance as a cost center. Start using it as the engine for operational excellence. Proceze gives you the tools, the data and the visibility to run a better business.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER (shared) -->
+<div id="footer-placeholder"></div>
+
+<script src="includes.js"></script>
+<script>
+    // Fade-in on scroll
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // Cycle animation
+    let cycleStarted = false;
+    const cycleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !cycleStarted) {
+                cycleStarted = true;
+                const nodes = document.querySelectorAll('.cycle-node');
+                nodes.forEach((node, i) => {
+                    setTimeout(() => node.classList.add('active'), i * 400);
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    const cc = document.getElementById('cycleContainer');
+    if (cc) cycleObserver.observe(cc);
+
+    // Amy quality chat bubbles
+    let amyQStarted = false;
+    const amyQObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !amyQStarted) {
+                amyQStarted = true;
+                document.querySelectorAll('#amyQualityDemo .amy-bubble').forEach(bubble => {
+                    const delay = parseInt(bubble.dataset.delay || '0');
+                    setTimeout(() => bubble.classList.add('show'), delay);
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    const aqd = document.getElementById('amyQualityDemo');
+    if (aqd) amyQObserver.observe(aqd);
+</script>
+</body>
+</html>

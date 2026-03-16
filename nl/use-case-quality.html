@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stop met raden waar je operatie vastloopt. Proceze maakt kwaliteitsproblemen zichtbaar, meetbaar en oplosbaar met gestructureerde procedures, datacollectie en continue verbeterworkflows.">
+    <meta name="keywords" content="kwaliteitsmanagement productie, continue verbetering software, kwaliteitscontrolesysteem, procesverbetering, kwaliteitsborging tool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://proceze.com/nl/use-case-quality.html">
+    <link rel="alternate" hreflang="en" href="https://proceze.com/en/use-case-quality.html">
+    <link rel="alternate" hreflang="nl" href="https://proceze.com/nl/use-case-quality.html">
+    <link rel="alternate" hreflang="x-default" href="https://proceze.com/en/use-case-quality.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proceze — Turn Quality Into Your Competitive Advantage">
+    <meta property="og:description" content="Map processes, collect execution data, fix problems at the root. Quality management that drives measurable improvement.">
+    <meta property="og:url" content="https://proceze.com/nl/use-case-quality.html">
+    <meta property="og:site_name" content="Proceze">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Proceze — Turn Quality Into Your Competitive Advantage">
+    <meta name="twitter:description" content="Map processes, collect execution data, fix problems at the root. Quality management that drives measurable improvement.">
+    <title>Proceze — Kwaliteitsmanagement voor Productie & Operations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'pz': { 500: '#0c7ef5', 600: '#0062d1' }, 'accent': '#F05A28', 'dark': '#0a0a0a' },
+                fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+            }}
+        }
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+        .hero-quality { background:linear-gradient(150deg,#0a0a0a 0%,#0a1a12 45%,#0a0a0a 100%); position:relative; overflow:hidden; }
+        .hero-quality::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(34,197,94,.15) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 20% 60%,rgba(12,126,245,.1) 0%,transparent 50%); pointer-events:none; }
+        .hero-quality::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
+        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .nav-header { transition:background .3s ease,border-color .3s ease; }
+        .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
+        .nav-scrolled a:not(.btn-cta) { color:#111!important; }
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+        .mockup-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.06); overflow:hidden; }
+        /* Nav dropdown */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-menu { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:12px; min-width:220px; z-index:60; }
+        .nav-dropdown-menu-inner { background:#111; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+        .nav-scrolled .nav-dropdown-menu-inner { background:#fff; border-color:#e5e7eb; box-shadow:0 8px 32px rgba(0,0,0,.1); }
+        .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+        .nav-dropdown-menu a { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:13px; color:rgba(255,255,255,.6); transition:all .15s ease; }
+        .nav-dropdown-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
+        .nav-scrolled .nav-dropdown-menu a { color:#666; }
+        .nav-scrolled .nav-dropdown-menu a:hover { background:#f5f5f5; color:#111; }
+        .nav-dropdown-menu .dd-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV (shared) -->
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-quality grid-pattern relative" style="background:linear-gradient(150deg,#0a0a0a 0%,#0a1a12 45%,#0a0a0a 100%);">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-40 min-h-[85vh] flex flex-col justify-center text-center">
+        <div class="inline-flex items-center gap-2 mb-6 justify-center">
+            <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center"><i class="fas fa-chart-line text-green-400 text-sm"></i></div>
+            <span class="text-sm font-semibold text-green-400 tracking-wide uppercase">Kwaliteitsmanagement</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">Kwaliteitsproblemen zijn onzichtbaar<br>totdat ze je geld kosten.</h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">Herwerk, afval, klachten en verloren contracten — de meeste kwaliteitsproblemen zijn symptomen van kapotte processen die niemand kan zien. Proceze maakt ze zichtbaar, meetbaar en oplosbaar.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base w-full sm:w-auto justify-center">Start Nu <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Terug naar homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- THE INVISIBLE COST -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">De onzichtbare kosten van kwaliteitsproblemen</h2>
+        <p class="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">De meeste bedrijven weten dat ze kwaliteitsproblemen hebben. Wat ze niet weten is <strong class="text-gray-900">waar, waarom en hoe vaak</strong>. Zonder die data kun je niet verbeteren. Je bent alleen maar aan het brandjes blussen.</p>
+        <p class="mt-4 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze turns every procedure execution into a data point. Over time, you see exactly which processes break down, which steps cause delays, and where to invest your improvement effort.</p>
+    </div>
+</section>
+
+<!-- THE QUALITY JOURNEY -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">De reis van continue verbetering</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze doesn't just track compliance. It gives you the tools to continuously improve your operation — step by step, cycle by cycle.</p>
+        </div>
+
+        <!-- Step 1: Inventarisatie -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center"><span class="text-green-600 font-black text-sm">1</span></div><span class="text-xs font-bold text-green-600 uppercase tracking-wider">Inventarisatie</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Breng je processen in kaart</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Start by documenting your existing workflows. Import documents, use templates, or let Amy AI structure everything from scratch. Map procedures to ISO clauses, sectors and departments.</p>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100"><h4 class="text-sm font-bold text-gray-900">Procedure Vault</h4></div>
+                <div class="p-4 sm:p-5 space-y-2.5">
+                    <div class="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50"><div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0"><i class="fas fa-file-alt text-green-600 text-xs"></i></div><div class="flex-1"><p class="text-xs font-semibold text-gray-900">Incoming Goods Inspection</p><p class="text-[10px] text-gray-400">ISO 9001 · 8.4 · Production</p></div><span class="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Published</span></div>
+                    <div class="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50"><div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0"><i class="fas fa-file-alt text-pz-500 text-xs"></i></div><div class="flex-1"><p class="text-xs font-semibold text-gray-900">Equipment Calibration</p><p class="text-[10px] text-gray-400">ISO 9001 · 7.1.5 · Maintenance</p></div><span class="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Published</span></div>
+                    <div class="flex items-center gap-3 p-2.5 rounded-lg bg-amber-50/50"><div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0"><i class="fas fa-file-alt text-amber-600 text-xs"></i></div><div class="flex-1"><p class="text-xs font-semibold text-gray-900">Supplier Quality Audit</p><p class="text-[10px] text-gray-400">ISO 9001 · 8.4 · Procurement</p></div><span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">Draft</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Uitvoeren -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1 mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100"><h4 class="text-sm font-bold text-gray-900">Executing: Incoming Goods Inspection</h4></div>
+                <div class="p-4 sm:p-5 space-y-3">
+                    <div class="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-100"><i class="fas fa-check-circle text-green-500 text-sm"></i><div><p class="text-xs font-semibold text-gray-900">Step 1: Verify delivery note</p><p class="text-[10px] text-green-600">Completed · Photo attached</p></div></div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-100"><i class="fas fa-check-circle text-green-500 text-sm"></i><div><p class="text-xs font-semibold text-gray-900">Step 2: Visual inspection</p><p class="text-[10px] text-green-600">Completed · Passed</p></div></div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg bg-pz-500/5 border border-pz-500/20"><i class="fas fa-arrow-right text-pz-500 text-sm"></i><div><p class="text-xs font-semibold text-gray-900">Step 3: Measure dimensions</p><p class="text-[10px] text-pz-500">Current step · Awaiting measurement input</p></div></div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg bg-gray-50 opacity-50"><i class="fas fa-circle text-gray-300 text-sm"></i><div><p class="text-xs font-semibold text-gray-900">Step 4: Accept or reject</p><p class="text-[10px] text-gray-400">Pending</p></div></div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center"><span class="text-pz-500 font-black text-sm">2</span></div><span class="text-xs font-bold text-pz-500 uppercase tracking-wider">Uitvoeren</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Verzamel data bij elke uitvoering</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Your team follows step-by-step procedures. Every answer, measurement, photo and signature is logged with a timestamp and user ID. This data is the foundation for all quality insights.</p>
+            </div>
+        </div>
+
+        <!-- Step 3: Verbeteren -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center"><span class="text-amber-600 font-black text-sm">3</span></div><span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Verbeteren</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Los problemen bij de kern op</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">When issues emerge, CAPAs drive structured improvement. Analyze root causes, propose corrections, update procedures, assign tasks and verify effectiveness. Every improvement is documented and measurable.</p>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100"><h4 class="text-sm font-bold text-gray-900">Quality Flywheel</h4></div>
+                <div class="p-4 sm:p-5">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="text-center p-4 rounded-xl bg-green-50 border border-green-100"><p class="text-2xl font-black text-green-600">24</p><p class="text-[10px] font-semibold text-green-700">CAPAs resolved</p></div>
+                        <div class="text-center p-4 rounded-xl bg-blue-50 border border-blue-100"><p class="text-2xl font-black text-pz-500">18</p><p class="text-[10px] font-semibold text-pz-600">Procedures improved</p></div>
+                        <div class="text-center p-4 rounded-xl bg-purple-50 border border-purple-100"><p class="text-2xl font-black text-purple-600">↑ 12%</p><p class="text-[10px] font-semibold text-purple-700">Pass rate increase</p></div>
+                        <div class="text-center p-4 rounded-xl bg-amber-50 border border-amber-100"><p class="text-2xl font-black text-amber-600">↓ 34%</p><p class="text-[10px] font-semibold text-amber-700">Recurring failures</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BUILT FOR TEAMS -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">Gebouwd voor teams die dingen maken</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">Whether you manufacture products, deliver services, or manage complex operations — quality management with Proceze fits your workflow.</p>
+        <div class="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-industry text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Productie</p></div>
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-truck text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Logistiek</p></div>
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-utensils text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Voeding & Dranken</p></div>
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-hard-hat text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Bouw</p></div>
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-heartbeat text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Gezondheidszorg</p></div>
+            <div class="bg-gray-50 rounded-2xl p-5 text-center"><i class="fas fa-bolt text-gray-400 text-xl mb-2"></i><p class="text-xs font-bold text-gray-600">Energie</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="hero-quality grid-pattern relative" style="background:linear-gradient(150deg,#0a0a0a 0%,#0a1a12 45%,#0a0a0a 100%);">
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Maak van kwaliteit je concurrentievoordeel</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Stop met raden waar je operatie vastloopt. Begin met meten, verbeteren en opschalen van kwaliteit — elke dag.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">Start Nu <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Terug naar homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER (shared) -->
+<div id="footer-placeholder"></div>
+
+<script src="includes.js"></script>
+<script>
+    const fadeObs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>

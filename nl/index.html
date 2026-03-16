@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zet ISO-, veiligheids- en kwaliteitseisen om in echte workflows die je team kan volgen. AI-gestuurde procedures, realtime compliance-tracking en audit-ready documentatie.">
+    <meta name="keywords" content="kwaliteitsmanagementsysteem, ISO compliance software, QMS software, kwaliteitsbeheer, audit management, CAPA-beheer, procedure software, QHSE software">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://proceze.com/nl/index.html">
+    <link rel="alternate" hreflang="en" href="https://proceze.com/en/index.html">
+    <link rel="alternate" hreflang="nl" href="https://proceze.com/nl/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://proceze.com/en/index.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proceze — Word Compliant in Dagen, Niet Maanden">
+    <meta property="og:description" content="AI-gestuurde compliance en kwaliteitsmanagement. Vervang spreadsheets door intelligente procedures die je team daadwerkelijk volgt.">
+    <meta property="og:url" content="https://proceze.com/nl/index.html">
+    <meta property="og:site_name" content="Proceze">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Proceze — Word Compliant in Dagen, Niet Maanden">
+    <meta name="twitter:description" content="AI-gestuurde compliance en kwaliteitsmanagement. Vervang spreadsheets door intelligente procedures die je team daadwerkelijk volgt.">
+    <title>Proceze — Compliance & Kwaliteitsmanagement Software | Word Compliant in Dagen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pz': { 500: '#0c7ef5', 600: '#0062d1' },
+                        'accent': '#F05A28',
+                        'dark': '#0a0a0a',
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+        .hero-bg { background:#0a0a0a; position:relative; overflow:hidden; }
+        .hero-bg::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 20% 60%,rgba(12,126,245,.15) 0%,transparent 60%), radial-gradient(ellipse 60% 80% at 80% 50%,rgba(240,90,40,.2) 0%,transparent 60%), radial-gradient(ellipse 50% 50% at 50% 80%,rgba(240,90,40,.12) 0%,transparent 50%); pointer-events:none; }
+        .hero-bg::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
+        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+        .compare-table td,.compare-table th { padding:12px 16px; text-align:left; }
+        @media(min-width:640px) { .compare-table td,.compare-table th { padding:16px 24px; } }
+        .compare-table tr { border-bottom:1px solid #f1f5f9; }
+        .compare-table tr:last-child { border-bottom:none; }
+        .nav-header { transition:background .3s ease,border-color .3s ease; }
+        .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
+        .nav-scrolled a:not(.btn-cta) { color:#111!important; }
+        .journey-progress-bar,.journey-progress-bar-v { transition:width 1.8s cubic-bezier(.4,0,.2,1),height 1.8s cubic-bezier(.4,0,.2,1); }
+        .amy-glow { position:relative; border-radius:1.5rem; background:linear-gradient(135deg,#0c7ef5,#F05A28,#22c55e,#0c7ef5); background-size:300% 300%; animation:amyBorderShift 6s ease infinite; padding:2px; }
+        @media (max-width:639px) { .amy-glow { padding:1.5px; } }
+        @keyframes amyBorderShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+        .typing-cursor { display:inline-block; width:2px; height:1em; background:#F05A28; margin-left:2px; animation:blink .8s step-end infinite; vertical-align:text-bottom; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        .amy-bubble { opacity:0; transform:translateY(12px); transition:opacity .4s ease,transform .4s ease; }
+        .amy-bubble.show { opacity:1; transform:translateY(0); }
+        .pulse-ring { animation:pulseRing 2s cubic-bezier(0,0,.2,1) infinite; }
+        @keyframes pulseRing { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(2.2);opacity:0} }
+        /* Floating Amy messages in hero */
+        .amy-float { position:absolute; background:rgba(255,255,255,.06); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:8px 14px; color:rgba(255,255,255,.5); font-size:12px; font-weight:500; opacity:0; pointer-events:none; white-space:nowrap; }
+        .amy-float.show { animation:floatIn 1s ease forwards; }
+        @keyframes floatIn { 0%{opacity:0;transform:translate(40px,30px) scale(.8)} 100%{opacity:1;transform:translate(0,0) scale(1)} }
+        .amy-float:nth-child(odd).show { animation:floatInAlt 1.1s ease forwards; }
+        @keyframes floatInAlt { 0%{opacity:0;transform:translate(-40px,20px) scale(.85)} 100%{opacity:1;transform:translate(0,0) scale(1)} }
+        /* Standards carousel */
+        .standards-track { display:flex; gap:24px; animation:scrollStandards 30s linear infinite; width:max-content; }
+        .standards-track:hover { animation-play-state:paused; }
+        @keyframes scrollStandards { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+        /* Timeline reassurance */
+        .timeline-step { position:relative; }
+        .timeline-step::before { content:''; position:absolute; left:24px; top:60px; bottom:-40px; width:1px; background:#e5e7eb; }
+        .timeline-step:last-child::before { display:none; }
+        /* Nav dropdown */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-menu { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:12px; min-width:220px; z-index:60; }
+        .nav-dropdown-menu-inner { background:#111; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px; box-shadow:0 8px 32px rgba(0,0,0,.4); }
+        .nav-scrolled .nav-dropdown-menu-inner { background:#fff; border-color:#e5e7eb; box-shadow:0 8px 32px rgba(0,0,0,.1); }
+        .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+        .nav-dropdown-menu a { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; font-size:13px; color:rgba(255,255,255,.6); transition:all .15s ease; }
+        .nav-dropdown-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
+        .nav-scrolled .nav-dropdown-menu a { color:#666; }
+        .nav-scrolled .nav-dropdown-menu a:hover { background:#f5f5f5; color:#111; }
+        .nav-dropdown-menu .dd-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; }
+    </style>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Proceze",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "AI-gestuurde compliance en kwaliteitsmanagement software. Zet ISO-, veiligheids- en kwaliteitseisen om in echte workflows die je team kan volgen.",
+        "url": "https://proceze.com/nl/index.html",
+        "inLanguage": "nl",
+        "author": {
+            "@type": "Organization",
+            "name": "Proceze",
+            "url": "https://proceze.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/OnlineOnly"
+        },
+        "featureList": [
+            "Interactieve digitale procedures",
+            "AI compliance-assistent (Amy)",
+            "CAPA-beheer workflow",
+            "Auditplanning en -gereedheid",
+            "Training- en kwalificatietracking",
+            "Realtime compliance-dashboards",
+            "Versiebeheer en digitale goedkeuringen",
+            "ISO-certificeringsondersteuning"
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV (shared) -->
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
+    <!-- Floating Amy messages -->
+    <div class="amy-float hidden sm:block" style="top:22%;left:6%;font-size:11px;" data-float-delay="800"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>Je ISO 9001 score is 94%</div>
+    <div class="amy-float hidden sm:block" style="top:18%;right:8%;font-size:13px;" data-float-delay="1600"><i class="fas fa-robot text-accent text-[10px] mr-1.5"></i>2 CAPAs vragen aandacht</div>
+    <div class="amy-float hidden sm:block" style="top:55%;left:4%;font-size:10px;" data-float-delay="2400"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>Certificaat verlenging over 5 dagen</div>
+    <div class="amy-float hidden sm:block" style="top:45%;right:5%;font-size:14px;" data-float-delay="3200"><i class="fas fa-robot text-accent text-[10px] mr-1.5"></i>Alle trainingen up-to-date</div>
+    <div class="amy-float hidden sm:block" style="top:70%;right:12%;font-size:11px;" data-float-delay="4000"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>Procedure succesvol bijgewerkt</div>
+    <div class="amy-float hidden lg:block" style="top:35%;left:10%;font-size:12px;" data-float-delay="4800"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>3 audits afgerond deze maand</div>
+    <div class="amy-float hidden lg:block" style="top:65%;left:8%;font-size:10px;" data-float-delay="5400"><i class="fas fa-robot text-accent text-[9px] mr-1.5"></i>Risicoregister beoordeeld</div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-24 md:pt-52 md:pb-44 min-h-[90vh] flex flex-col justify-center text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">Word compliant in dagen,<br>niet maanden.</h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">Zet ISO-, veiligheids- en kwaliteitseisen om in echte workflows die je team daadwerkelijk kan volgen. Proceze vervangt documenten, spreadsheets en handmatige audits door intelligente procedures, AI-begeleiding en realtime compliance-tracking.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base w-full sm:w-auto justify-center">Start Nu <i class="fas fa-chevron-right text-sm"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">Compliance zou groei moeten stimuleren, niet vertragen</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Compliance hoort te helpen bij het sluiten van deals en het opbouwen van vertrouwen, maar de meeste teams zitten vast in administratie, handmatige checklists en eindeloos heen-en-weer.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 hover:border-gray-300 transition">
+                <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center mb-3 sm:mb-4"><i class="fas fa-list-check text-red-400"></i></div>
+                <h3 class="font-semibold text-gray-900 text-sm sm:text-base">Honderden checklistpunten</h3>
+                <p class="mt-1.5 sm:mt-2 text-sm text-gray-500 leading-relaxed">Spreadsheets met honderden controles die handmatige tracking en bewijsverzameling vereisen.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 hover:border-gray-300 transition">
+                <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-3 sm:mb-4"><i class="fas fa-camera text-amber-400"></i></div>
+                <h3 class="font-semibold text-gray-900 text-sm sm:text-base">Handmatige screenshots als bewijs</h3>
+                <p class="mt-1.5 sm:mt-2 text-sm text-gray-500 leading-relaxed">Screenshots maken, documenten schrijven en bewijs één voor één uploaden.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 hover:border-gray-300 transition">
+                <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mb-3 sm:mb-4"><i class="fas fa-clock text-orange-400"></i></div>
+                <h3 class="font-semibold text-gray-900 text-sm sm:text-base">Vertraagde deals en lanceertijdlijnen</h3>
+                <p class="mt-1.5 sm:mt-2 text-sm text-gray-500 leading-relaxed">Enterprise-klanten wachten op je compliance-status voordat ze contracten tekenen.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 hover:border-gray-300 transition">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-3 sm:mb-4"><i class="fas fa-comments text-blue-400"></i></div>
+                <h3 class="font-semibold text-gray-900 text-sm sm:text-base">Heen-en-weer met auditors</h3>
+                <p class="mt-1.5 sm:mt-2 text-sm text-gray-500 leading-relaxed">Weken aan e-mailthreads om het juiste bewijs in het juiste formaat aan te leveren.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 0 TO COMPLIANT JOURNEY -->
+<section id="features" class="py-16 sm:py-20 md:py-28 bg-gray-50 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">Alles wat je nodig hebt om van 0 naar compliant te gaan</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500">Upload een beleidsdocument, laat AI procedures bouwen, voer uit met je team en monitor alles in realtime.</p>
+        </div>
+        <div class="mt-14 sm:mt-16 md:mt-20 relative" id="journeyContainer">
+            <div class="hidden lg:block absolute top-6 left-[10%] right-[10%] h-[3px] bg-gray-200 rounded-full z-0">
+                <div id="journeyBarH" class="journey-progress-bar h-full bg-gradient-to-r from-accent via-orange-400 to-green-500 rounded-full" style="width:0%"></div>
+            </div>
+            <div class="lg:hidden absolute left-[27px] top-[28px] bottom-[28px] w-[3px] bg-gray-200 rounded-full z-0">
+                <div id="journeyBarV" class="journey-progress-bar-v w-full bg-gradient-to-b from-accent via-orange-400 to-green-500 rounded-full" style="height:0%"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
+                <div class="journey-node flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:gap-0 group" data-step="1">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-14 h-14 lg:w-12 lg:h-12 rounded-full border-[3px] border-gray-200 bg-white flex items-center justify-center transition-all duration-500 group-[.active]:border-accent group-[.active]:shadow-[0_0_20px_rgba(240,90,40,0.25)]"><i class="fas fa-cloud-arrow-up text-gray-300 text-lg transition-colors duration-500 group-[.active]:text-accent"></i></div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center opacity-0 scale-0 transition-all duration-300 group-[.active]:opacity-100 group-[.active]:scale-100">1</div>
+                    </div>
+                    <div class="lg:mt-5 lg:text-center"><h4 class="text-sm font-bold text-gray-900">Upload je beleid</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Upload een ISO-document, PDF of intern beleid. Amy leest het direct.</p></div>
+                </div>
+                <div class="journey-node flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:gap-0 group" data-step="2">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-14 h-14 lg:w-12 lg:h-12 rounded-full border-[3px] border-gray-200 bg-white flex items-center justify-center transition-all duration-500 group-[.active]:border-accent group-[.active]:shadow-[0_0_20px_rgba(240,90,40,0.25)]"><i class="fas fa-wand-magic-sparkles text-gray-300 text-lg transition-colors duration-500 group-[.active]:text-accent"></i></div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center opacity-0 scale-0 transition-all duration-300 group-[.active]:opacity-100 group-[.active]:scale-100">2</div>
+                    </div>
+                    <div class="lg:mt-5 lg:text-center"><h4 class="text-sm font-bold text-gray-900">AI bouwt procedures</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Hoofdstukken, vragen, drempelwaarden en bewijsvelden — gegenereerd in minuten.</p></div>
+                </div>
+                <div class="journey-node flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:gap-0 group" data-step="3">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-14 h-14 lg:w-12 lg:h-12 rounded-full border-[3px] border-gray-200 bg-white flex items-center justify-center transition-all duration-500 group-[.active]:border-accent group-[.active]:shadow-[0_0_20px_rgba(240,90,40,0.25)]"><i class="fas fa-users text-gray-300 text-lg transition-colors duration-500 group-[.active]:text-accent"></i></div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center opacity-0 scale-0 transition-all duration-300 group-[.active]:opacity-100 group-[.active]:scale-100">3</div>
+                    </div>
+                    <div class="lg:mt-5 lg:text-center"><h4 class="text-sm font-bold text-gray-900">Team voert uit</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Je team volgt interactieve stapsgewijze workflows. Bewijs wordt automatisch vastgelegd.</p></div>
+                </div>
+                <div class="journey-node flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:gap-0 group" data-step="4">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-14 h-14 lg:w-12 lg:h-12 rounded-full border-[3px] border-gray-200 bg-white flex items-center justify-center transition-all duration-500 group-[.active]:border-accent group-[.active]:shadow-[0_0_20px_rgba(240,90,40,0.25)]"><i class="fas fa-chart-line text-gray-300 text-lg transition-colors duration-500 group-[.active]:text-accent"></i></div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center opacity-0 scale-0 transition-all duration-300 group-[.active]:opacity-100 group-[.active]:scale-100">4</div>
+                    </div>
+                    <div class="lg:mt-5 lg:text-center"><h4 class="text-sm font-bold text-gray-900">Systeem bewaakt</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Risico's, CAPA's, audits, certificaten, trainingen — allemaal in realtime bijgehouden.</p></div>
+                </div>
+                <div class="journey-node flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:gap-0 group" data-step="5">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-14 h-14 lg:w-12 lg:h-12 rounded-full border-[3px] border-gray-200 bg-white flex items-center justify-center transition-all duration-500 group-[.active]:border-green-500 group-[.active]:bg-green-500 group-[.active]:shadow-[0_0_24px_rgba(34,197,94,0.35)]"><i class="fas fa-shield-halved text-gray-300 text-lg transition-colors duration-500 group-[.active]:text-white"></i></div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-green-500 text-white text-[10px] font-bold flex items-center justify-center opacity-0 scale-0 transition-all duration-300 group-[.active]:opacity-100 group-[.active]:scale-100"><i class="fas fa-check text-[9px]"></i></div>
+                    </div>
+                    <div class="lg:mt-5 lg:text-center"><h4 class="text-sm font-bold text-gray-900">Compliant</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Wanneer de auditor komt, begin je niet met voorbereiden. Je opent het systeem.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-14 sm:mt-16 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-file-lines text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Slimme Procedures</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-shield-halved text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">CAPA-beheer</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-triangle-exclamation text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Risicoregisters</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-calendar-check text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Auditplanning</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-certificate text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Certificaten</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-truck text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Leveranciers</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-graduation-cap text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Trainingsregistratie</p></div>
+            <div class="border border-gray-200 rounded-xl p-4 sm:p-5 text-center hover:border-accent/40 hover:shadow-sm transition-all bg-white"><i class="fas fa-vault text-accent text-lg sm:text-xl mb-1.5 sm:mb-2"></i><p class="text-[11px] sm:text-xs font-semibold text-gray-700">Documentbeheer</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- AMY — The power of a compliant agent -->
+<section id="amy" class="relative py-16 sm:py-24 md:py-36 overflow-hidden" style="background:#0a0a0a;">
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 50% at 30% 50%,rgba(12,126,245,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 70% at 75% 60%,rgba(240,90,40,.15) 0%,transparent 55%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 mb-6 justify-center">
+                <span class="relative flex h-3 w-3">
+                    <span class="pulse-ring absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                </span>
+                <span class="text-sm font-semibold text-accent tracking-wide uppercase">AI Agent</span>
+            </div>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.08]">De kracht van een compliance-agent op een druk op de knop</h2>
+            <p class="mt-6 text-lg text-white/60 leading-relaxed">Maak kennis met Amy — je ingebouwde compliance AI. Ze beantwoordt niet alleen vragen. Ze leest je documenten, bouwt procedures, bewaakt je compliance-gezondheid en vertelt je precies wat aandacht nodig heeft.</p>
+        </div>
+        <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="order-2 lg:order-1 space-y-5">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><i class="fas fa-file-import text-accent text-sm"></i></div>
+                    <div><h4 class="text-sm font-bold text-white">Upload een document, krijg een procedure</h4><p class="text-sm text-white/40 mt-0.5">Upload een ISO PDF of Word-document — Amy zet het om in een gestructureerde procedure met hoofdstukken, vragen en bewijsvelden.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><i class="fas fa-heartbeat text-accent text-sm"></i></div>
+                    <div><h4 class="text-sm font-bold text-white">Realtime compliance-gezondheid</h4><p class="text-sm text-white/40 mt-0.5">"Amy, hoe staat onze compliance ervoor?" — Ze controleert CAPA's, risico's, certificaten, trainingen, audits en geeft je direct een score.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><i class="fas fa-magnifying-glass text-accent text-sm"></i></div>
+                    <div><h4 class="text-sm font-bold text-white">Zoek door alles</h4><p class="text-sm text-white/40 mt-0.5">"Toon alle achterstallige risico's" — Amy doorzoekt je procedures, uitvoeringen en compliance-modules direct.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><i class="fas fa-language text-accent text-sm"></i></div>
+                    <div><h4 class="text-sm font-bold text-white">Werkt in elke taal</h4><p class="text-sm text-white/40 mt-0.5">Vraag in het Nederlands, Engels, Duits, Frans — Amy detecteert en antwoordt in dezelfde taal.</p></div>
+                </div>
+            </div>
+            <!-- Chat container -->
+            <div class="order-1 lg:order-2 max-w-4xl w-full mx-auto amy-glow rounded-3xl">
+                <div class="bg-[#111] rounded-[calc(1.5rem-2px)] p-5 sm:p-8">
+                    <div class="flex items-center gap-3 mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
+                        <div class="relative">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center"><i class="fas fa-robot text-white text-xs sm:text-sm"></i></div>
+                            <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-green-500 border-2 border-[#111]"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Amy</p>
+                            <p class="text-[11px] sm:text-xs text-white/40">Compliance AI Agent</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 sm:space-y-4" id="amyChatDemo">
+                        <div class="flex justify-end">
+                            <div class="bg-accent/10 border border-accent/20 rounded-2xl rounded-br-md px-3.5 py-2 sm:px-4 sm:py-2.5 max-w-[80%]">
+                                <p class="text-xs sm:text-sm text-white/80">Hoe staat onze compliance ervoor?</p>
+                            </div>
+                        </div>
+                        <div class="amy-bubble flex gap-2.5 sm:gap-3" data-delay="600">
+                            <div class="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center mt-1"><i class="fas fa-robot text-white text-[8px] sm:text-[10px]"></i></div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-3.5 py-2.5 sm:px-4 sm:py-3 max-w-[85%]">
+                                <p class="text-xs sm:text-sm text-white/70 leading-relaxed">Je compliance-score is <span class="text-green-400 font-bold">87/100</span>. Hier is de uitsplitsing:</p>
+                                <div class="mt-2.5 sm:mt-3 space-y-1.5 sm:space-y-2">
+                                    <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Procedures</span><span class="text-green-400 font-semibold">12/12 actief</span></div>
+                                    <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Open CAPA's</span><span class="text-amber-400 font-semibold">2 vereisen aandacht</span></div>
+                                    <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Certificaten</span><span class="text-red-400 font-semibold">1 verloopt over 5 dagen</span></div>
+                                    <div class="flex items-center justify-between text-[11px] sm:text-xs"><span class="text-white/50">Training</span><span class="text-green-400 font-semibold">Allemaal up-to-date</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="amy-bubble flex gap-2.5 sm:gap-3" data-delay="1400">
+                            <div class="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center mt-1"><i class="fas fa-robot text-white text-[8px] sm:text-[10px]"></i></div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-3.5 py-2.5 sm:px-4 sm:py-3 max-w-[85%]">
+                                <p class="text-xs sm:text-sm text-white/70 leading-relaxed">Ik raad aan om prioriteit te geven aan de <span class="text-accent font-semibold">ISO 27001 certificate renewal</span> — het verloopt op 20 juni. Wil je dat ik de bijbehorende procedure zoek?<span class="typing-cursor"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DASHBOARD PREVIEW — Real-time visibility -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">Realtime inzicht in compliance en kwaliteit</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Het management kent altijd de echte status. Niet gokken, niet rondvragen — één dashboard toont alles.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 max-w-3xl mx-auto" id="dashboardPreview">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                <div class="p-5 sm:p-6 border-b border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-900">Goedemorgen, Sarah</h3>
+                            <p class="text-xs sm:text-sm text-gray-400 mt-0.5 flex items-center gap-1.5"><i class="far fa-calendar text-[10px]"></i> Zaterdag 15 maart 2026</p>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gray-100">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-sm font-semibold text-gray-700">Compliance-gezondheid</p>
+                            <p class="text-xs font-semibold text-green-600">66/66 up-to-date</p>
+                        </div>
+                        <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="health-bar-fill h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full" style="width:0%;transition:width 1.2s cubic-bezier(.4,0,.2,1)" data-target="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-gray-100">
+                    <div class="p-4 sm:p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-50 flex items-center justify-center"><i class="fas fa-clipboard-check text-pz-500 text-xs"></i></div>
+                                <span class="text-xs sm:text-sm font-semibold text-gray-700">Audits</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-semibold text-green-600 flex items-center gap-1"><i class="fas fa-check text-[8px]"></i> Op schema</span>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-black text-gray-900">8<span class="text-base sm:text-lg font-semibold text-gray-400">/8</span></p>
+                                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">Dit jaar afgerond</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 flex items-center justify-center"><i class="fas fa-clipboard-list text-purple-500 text-xs"></i></div>
+                                <span class="text-xs sm:text-sm font-semibold text-gray-700">CAPA</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-semibold text-green-600 flex items-center gap-1"><i class="fas fa-check text-[8px]"></i> Allemaal opgelost</span>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-black text-gray-900">0</p>
+                                <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">openstaande acties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-100 p-4 sm:p-5">
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-pz-500 flex items-center justify-center"><i class="fas fa-bolt text-white text-xs"></i></div>
+                        <div>
+                            <p class="text-xs sm:text-sm font-bold text-gray-900">Wat moet ik nu doen?</p>
+                            <p class="text-[10px] sm:text-xs text-gray-400">Gesorteerd op prioriteit</p>
+                        </div>
+                    </div>
+                    <div class="border-l-[3px] border-accent rounded-lg bg-gray-50 p-3 sm:p-3.5 mb-2.5">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center"><i class="fas fa-play text-accent text-[8px]"></i></div>
+                            <div>
+                                <p class="text-[10px] font-bold text-accent uppercase tracking-wider">Ga verder</p>
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">ISO 9001 Interne Audit</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 text-[10px] sm:text-xs text-gray-400">
+                            <span class="flex items-center gap-1"><span class="w-4 h-4 rounded-full bg-pz-500 text-white text-[8px] font-bold flex items-center justify-center">S</span> Sarah</span>
+                            <span>15-03 14:30</span>
+                        </div>
+                        <div class="mt-2 w-full h-1.5 bg-gray-200 rounded-full overflow-hidden"><div class="h-full bg-accent rounded-full" style="width:65%"></div></div>
+                    </div>
+                    <div class="border-l-[3px] border-amber-400 rounded-lg bg-gray-50 p-3 sm:p-3.5">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-amber-50 flex items-center justify-center"><i class="fas fa-play text-amber-500 text-[8px]"></i></div>
+                            <div>
+                                <p class="text-[10px] font-bold text-amber-500 uppercase tracking-wider">Ga verder</p>
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Leveranciersbeoordeling Q1</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 text-[10px] sm:text-xs text-gray-400">
+                            <span class="flex items-center gap-1"><span class="w-4 h-4 rounded-full bg-pz-500 text-white text-[8px] font-bold flex items-center justify-center">S</span> Sarah</span>
+                            <span>15-03 09:45</span>
+                        </div>
+                        <div class="mt-2 w-full h-1.5 bg-gray-200 rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full" style="width:30%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-6 sm:mt-8 text-center text-sm sm:text-base text-gray-500">Elke procedure-uitvoering, auditresultaat, CAPA, risico en certificaat — zichtbaar op één plek.</p>
+            <p class="text-center text-sm sm:text-base text-gray-900 font-semibold">Geen spreadsheets. Geen verrassingen.</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUALITY TEASER — Bridge to quality page -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-sm font-semibold text-accent tracking-wide uppercase mb-4">Er is meer</p>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">Compliance is het startpunt.<br>Operationele excellentie is de bestemming.</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Elke procedure die je team uitvoert genereert data. Elke CAPA stuurt echte verandering aan. Elke audit onthult waar je kunt verbeteren. Proceze maakt je niet alleen compliant — het maakt je hele operatie zichtbaar, meetbaar en continu beter.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 text-center hover:border-accent/40 hover:shadow-sm transition-all">
+                <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-bar text-accent"></i></div>
+                <h4 class="text-sm font-bold text-gray-900">Continue verbetering</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Zie welke processen falen, waar knelpunten zitten en wat je eerst moet oplossen.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 text-center hover:border-accent/40 hover:shadow-sm transition-all">
+                <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-hard-hat text-green-600"></i></div>
+                <h4 class="text-sm font-bold text-gray-900">Veiligere operaties</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Veiligheidsescalaties komen automatisch naar boven wanneer een kritieke stap faalt.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 text-center hover:border-accent/40 hover:shadow-sm transition-all">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-gauge-high text-pz-500"></i></div>
+                <h4 class="text-sm font-bold text-gray-900">Hogere efficiëntie</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Gestandaardiseerde processen betekenen minder fouten, minder verspilling en snellere uitvoering.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 sm:p-6 text-center hover:border-accent/40 hover:shadow-sm transition-all">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4"><i class="fas fa-arrow-trend-up text-purple-600"></i></div>
+                <h4 class="text-sm font-bold text-gray-900">Higher margins</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Geoptimaliseerde processen verlagen kosten en maken je bedrijf winstgevender.</p>
+            </div>
+        </div>
+        <div class="mt-10 sm:mt-12 text-center">
+            <a href="quality.html" class="inline-flex items-center gap-2 bg-gray-900 text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-gray-800 transition text-sm sm:text-base">Ontdek kwaliteitsmanagement <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- STANDARDS — Carousel -->
+<section id="compliance" class="py-16 sm:py-20 md:py-28 bg-gray-50 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">Ontworpen voor echte normen</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze ondersteunt de operationele kant van compliance-frameworks. In plaats van papierwerk om aan de norm te voldoen, zet Proceze eisen om in workflows die je team daadwerkelijk volgt.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 relative overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
+            <div class="standards-track">
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 9001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 27001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 14001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 45001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 22000</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 13485</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">SOC 2</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">CSC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">VCA / SCC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">IATF 16949</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">AS9100</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">GMP</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">HACCP</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">BRC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">IFS</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">FSSC 22000</span>
+                <!-- Duplicated set for seamless loop -->
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 9001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 27001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 14001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 45001</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 22000</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">ISO 13485</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">SOC 2</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">CSC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">VCA / SCC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">IATF 16949</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">AS9100</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">GMP</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">HACCP</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">BRC</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">IFS</span>
+                <span class="flex-shrink-0 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm font-semibold text-gray-700">FSSC 22000</span>
+            </div>
+        </div>
+        <p class="mt-8 sm:mt-10 text-center text-sm sm:text-base text-gray-500 max-w-xl mx-auto">Compliance wordt onderdeel van de operatie — geen jaarlijks project.</p>
+    </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="compare" class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-5 sm:px-6">
+        <div class="text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight">Waarom bedrijven kiezen voor Proceze</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500">Traditionele QMS-software richt zich op documenten. Proceze richt zich op uitvoering.</p>
+        </div>
+        <div class="mt-10 sm:mt-14 md:mt-16 overflow-hidden rounded-xl border border-gray-200">
+            <table class="compare-table w-full">
+                <thead><tr class="bg-white"><th class="text-xs sm:text-sm font-semibold text-gray-500 w-1/2">Traditioneel QMS</th><th class="text-xs sm:text-sm font-semibold text-accent w-1/2">Proceze</th></tr></thead>
+                <tbody class="text-xs sm:text-sm">
+                    <tr><td class="text-gray-500">Statische procedures in Word of PDF</td><td class="text-gray-900 font-medium">Interactieve procedures die teams stap voor stap uitvoeren</td></tr>
+                    <tr><td class="text-gray-500">Handmatig risicobeheer</td><td class="text-gray-900 font-medium">Automatische escalatie vanuit procedure-antwoorden</td></tr>
+                    <tr><td class="text-gray-500">Losse modules en dure add-ons</td><td class="text-gray-900 font-medium">Alles inbegrepen in één platform</td></tr>
+                    <tr><td class="text-gray-500">Weken implementatie</td><td class="text-gray-900 font-medium">AI bouwt procedures in minutes</td></tr>
+                    <tr><td class="text-gray-500">Moeilijk om compliance aan te tonen</td><td class="text-gray-900 font-medium">Automatische audittrail</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS — Reassurance (moved lower) -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight">Nog steeds benieuwd hoe het werkt?</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze vervangt documenten, checklists en e-mailgoedkeuringen door één intelligent systeem. Hier is de eenvoudige versie.</p>
+        </div>
+        <div class="mt-14 sm:mt-16 md:mt-20 max-w-2xl mx-auto space-y-8 sm:space-y-10">
+            <div class="timeline-step flex gap-4 sm:gap-6">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center text-sm font-bold text-gray-400">1</div>
+                <div class="pt-2"><h3 class="text-base sm:text-lg font-bold text-gray-900">Procedures worden gestructureerde workflows</h3><p class="mt-1 text-sm sm:text-base text-gray-500">In plaats van statische documenten volgt je team interactieve stapsgewijze procedures met ingebouwde logica.</p></div>
+            </div>
+            <div class="timeline-step flex gap-4 sm:gap-6">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center text-sm font-bold text-gray-400">2</div>
+                <div class="pt-2"><h3 class="text-base sm:text-lg font-bold text-gray-900">Audits draaien automatisch</h3><p class="mt-1 text-sm sm:text-base text-gray-500">Plan interne audits, wijs ze toe aan teamleden en volg de afronding — allemaal vanuit één dashboard.</p></div>
+            </div>
+            <div class="timeline-step flex gap-4 sm:gap-6">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center text-sm font-bold text-gray-400">3</div>
+                <div class="pt-2"><h3 class="text-base sm:text-lg font-bold text-gray-900">Bewijs wordt vastgelegd terwijl het werk plaatsvindt</h3><p class="mt-1 text-sm sm:text-base text-gray-500">Antwoorden, foto's, handtekeningen en tijdstempels worden automatisch gelogd tijdens procedure-uitvoering.</p></div>
+            </div>
+            <div class="timeline-step flex gap-4 sm:gap-6">
+                <div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-accent bg-accent/5 flex items-center justify-center text-sm font-bold text-accent"><i class="fas fa-check text-sm"></i></div>
+                <div class="pt-2"><h3 class="text-base sm:text-lg font-bold text-gray-900">Compliant</h3><p class="mt-1 text-sm sm:text-base text-gray-500">Wanneer een auditor een vraag stelt, is het antwoord er al. Je opent het systeem — je begint niet met voorbereiden.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="hero-bg grid-pattern relative" style="background:#0a0a0a;">
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Begin met compliance die daadwerkelijk werkt</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Word sneller compliant, verminder handmatig werk en geef je team een systeem dat ze daadwerkelijk kunnen gebruiken. Begin vandaag met je eerste procedure.</p>
+        <div class="mt-8 sm:mt-10"><a href="#" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">Start Nu <i class="fas fa-chevron-right text-sm"></i></a></div>
+    </div>
+</section>
+
+<!-- FOOTER (shared) -->
+<div id="footer-placeholder"></div>
+
+<script src="includes.js"></script>
+<script>
+    // Fade-in on scroll
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // Floating Amy messages in hero
+    let heroFloatsStarted = false;
+    const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !heroFloatsStarted) {
+                heroFloatsStarted = true;
+                document.querySelectorAll('.amy-float').forEach(msg => {
+                    const delay = parseInt(msg.dataset.floatDelay || '0');
+                    setTimeout(() => msg.classList.add('show'), delay);
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    const heroSection = document.querySelector('.hero-bg');
+    if (heroSection) heroObserver.observe(heroSection);
+
+    // Journey animation
+    let journeyStarted = false;
+    const journeyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !journeyStarted) {
+                journeyStarted = true;
+                const nodes = document.querySelectorAll('.journey-node');
+                const barH = document.getElementById('journeyBarH');
+                const barV = document.getElementById('journeyBarV');
+                nodes.forEach((node, i) => {
+                    setTimeout(() => {
+                        node.classList.add('active');
+                        const pct = ((i + 1) / nodes.length) * 100;
+                        if (barH) barH.style.width = pct + '%';
+                        if (barV) barV.style.height = pct + '%';
+                    }, i * 500);
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    const jc = document.getElementById('journeyContainer');
+    if (jc) journeyObserver.observe(jc);
+
+    // Amy chat bubbles
+    let amyStarted = false;
+    const amyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !amyStarted) {
+                amyStarted = true;
+                document.querySelectorAll('.amy-bubble').forEach(bubble => {
+                    const delay = parseInt(bubble.dataset.delay || '0');
+                    setTimeout(() => bubble.classList.add('show'), delay);
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    const amyChat = document.getElementById('amyChatDemo');
+    if (amyChat) amyObserver.observe(amyChat);
+
+    // Dashboard health bar animation
+    let dashStarted = false;
+    const dashObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !dashStarted) {
+                dashStarted = true;
+                document.querySelectorAll('.health-bar-fill').forEach(bar => {
+                    const target = bar.dataset.target || '100';
+                    setTimeout(() => { bar.style.width = target + '%'; }, 300);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+    const dp = document.getElementById('dashboardPreview');
+    if (dp) dashObserver.observe(dp);
+</script>
+</body>
+</html>
