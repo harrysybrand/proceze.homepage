@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Pagina niet gevonden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .metallic {
+            background: linear-gradient(
+                90deg,
+                #bbb 0%,
+                #fff 25%,
+                #bbb 50%,
+                #fff 75%,
+                #bbb 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        .fun-button {
+            animation: bounce 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .fun-button:hover {
+            animation: pulse 1.5s ease-in-out infinite;
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #2563eb, #3b82f6);
+        }
+
+        .glass-frame {
+            background: rgba(17, 24, 39, 0.6);
+            border: 12px solid #ffd700;
+            box-shadow: 0 0 15px rgba(218,165,32,0.3);
+            position: relative;
+            z-index: 10;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+
+        .glass-handle {
+            position: absolute;
+            width: 20px;
+            height: 80px;
+            background: linear-gradient(145deg, #ffd700, #daa520);
+            bottom: 25px;
+            left: calc(90%);
+            transform: rotate(135deg);
+            transform-origin: bottom left;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(218,165,32,0.3);
+            z-index: 5;
+            backface-visibility: hidden;
+        }
+
+        .glass-handle::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(145deg, #ffd700, #daa520);
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .glass-handle {
+                width: 16px;
+                height: 64px;
+                bottom: 20px;
+                left: calc(85%);
+                transform: rotate(140deg);
+            }
+            
+            .glass-handle::after {
+                width: 24px;
+                height: 16px;
+            }
+        }
+
+        .trading-card {
+            background: #ffffff;
+            transform: rotateY(-15deg) rotateX(5deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .browser-top {
+            height: 24%;
+            background: #2a2a2a;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 4px;
+            padding-top: 2px;
+        }
+
+        .browser-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .browser-dot.red {
+            background: #ff5f56;
+            border: 1px solid #e0443e;
+        }
+
+        .browser-dot.yellow {
+            background: #ffbd2e;
+            border: 1px solid #dea123;
+        }
+
+        .browser-dot.green {
+            background: #27c93f;
+            border: 1px solid #1aab29;
+        }
+
+        .browser-content {
+            height: 76%;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 4px;
+        }
+
+        .ui-mockup {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .ui-header {
+            height: 15%;
+            background: #2a2a2a;
+            border-radius: 3px;
+        }
+
+        .ui-body {
+            flex: 1;
+            display: flex;
+            gap: 3px;
+        }
+
+        .ui-sidebar {
+            width: 30%;
+            background: #2a2a2a;
+            border-radius: 3px;
+        }
+
+        .ui-main {
+            flex: 1;
+            background: #2a2a2a;
+            border-radius: 3px;
+        }
+
+        .mpyre-logo {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            font-size: 6px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 500;
+        }
+
+        .card-container {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .quirky-button {
+            background: linear-gradient(145deg, #1e293b, #111827);
+            color: white;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 12px;
+            position: relative;
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            border: 2px solid #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 4px 4px 0px #ffd700;
+        }
+
+        .quirky-button:hover {
+            transform: rotate(2deg) translateY(-2px);
+            box-shadow: -4px 4px 0px #ffd700;
+            background: linear-gradient(145deg, #111827, #1e293b);
+        }
+
+        .quirky-button:active {
+            transform: rotate(0deg) translateY(2px);
+            box-shadow: 0px 0px 0px #ffd700;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+    <div class="text-center">
+        <!-- Main 404 Container -->
+        <div class="relative mb-8">
+            <!-- Metallic 404 -->
+            <h1 class="metallic text-[150px] md:text-[200px] font-bold leading-none">
+                404
+            </h1>
+
+            <!-- Magnifying Glass -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div class="magnifying-glass">
+                    <div class="glass-frame rounded-full w-32 h-32 md:w-40 md:h-40 flex items-center justify-center overflow-hidden">
+                        <div class="glass-content w-full h-full flex items-center justify-center">
+                            <div class="card-container animate-float">
+                                <!-- Trading Cards -->
+                                <div class="trading-card w-16 h-24 md:w-20 md:h-28 absolute transform -translate-x-4 -rotate-6">
+                                    <div class="browser-top">
+                                        <div class="browser-dots">
+                                            <div class="browser-dot red"></div>
+                                            <div class="browser-dot yellow"></div>
+                                            <div class="browser-dot green"></div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <div class="ui-mockup">
+                                            <div class="ui-header"></div>
+                                            <div class="ui-body">
+                                                <div class="ui-sidebar"></div>
+                                                <div class="ui-main"></div>
+                                            </div>
+                                        </div>
+                                        <span class="mpyre-logo">mpyre</span>
+                                    </div>
+                                </div>
+                                <div class="trading-card w-16 h-24 md:w-20 md:h-28 absolute transform translate-x-4 rotate-6">
+                                    <div class="browser-top">
+                                        <div class="browser-dots">
+                                            <div class="browser-dot red"></div>
+                                            <div class="browser-dot yellow"></div>
+                                            <div class="browser-dot green"></div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <div class="ui-mockup">
+                                            <div class="ui-header"></div>
+                                            <div class="ui-body">
+                                                <div class="ui-sidebar"></div>
+                                                <div class="ui-main"></div>
+                                            </div>
+                                        </div>
+                                        <span class="mpyre-logo">mpyre</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-handle"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message -->
+        <h2 class="text-white text-2xl md:text-3xl font-semibold mb-4">
+            Whoops...... Wrong worksite!
+        </h2>
+        <p class="text-gray-400 text-lg mb-8 max-w-md mx-auto">
+            Seems like this page has gone to a different job. Let's get you back to where the real work's happening.
+        </p>
+
+        <!-- Button -->
+        <a href="/" class="quirky-button inline-block">
+            ← Return to Workshop
+        </a>
+    </div>
+</body>
+</html>

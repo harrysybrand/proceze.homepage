@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceze — Certification & Standards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'pz': { 500: '#0c7ef5', 600: '#0062d1' }, 'accent': '#F05A28', 'dark': '#0a0a0a' },
+                fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+            }}
+        }
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+        .hero-cert { background:linear-gradient(160deg,#0a0a0a 0%,#0a1020 40%,#0a0a1a 70%,#0a0a0a 100%); position:relative; overflow:hidden; }
+        .hero-cert::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 40%,rgba(12,126,245,.2) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 80% 60%,rgba(240,90,40,.1) 0%,transparent 50%); pointer-events:none; }
+        .hero-cert::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
+        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .nav-header { transition:background .3s ease,border-color .3s ease; }
+        .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
+        .nav-scrolled a:not(.btn-cta) { color:#111!important; }
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+        .mockup-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.06); overflow:hidden; }
+        .step-line { position:relative; }
+        .step-line::after { content:''; position:absolute; left:28px; top:72px; bottom:-32px; width:2px; background:linear-gradient(to bottom,#e5e7eb,transparent); }
+        .step-line:last-child::after { display:none; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV -->
+<nav id="mainNav" class="nav-header fixed top-0 w-full z-50 bg-transparent border-b border-transparent">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold text-white tracking-tight">proceze.</a>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="index.html#features" class="text-sm text-white/70 hover:text-white transition">Features</a>
+            <a href="index.html#amy" class="text-sm text-white/70 hover:text-white transition">Amy AI</a>
+            <a href="quality.html" class="text-sm text-white/70 hover:text-white transition">Quality</a>
+            <a href="index.html#compare" class="text-sm text-white/70 hover:text-white transition">Why Proceze</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-orange-600 transition">Get Started <i class="fas fa-chevron-right text-xs"></i></a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-white"><i class="fas fa-bars text-lg"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/10">
+        <div class="px-5 py-4 space-y-3">
+            <a href="index.html#features" class="block text-sm text-white/80 hover:text-white py-1">Features</a>
+            <a href="index.html#amy" class="block text-sm text-white/80 hover:text-white py-1">Amy AI</a>
+            <a href="quality.html" class="block text-sm text-white/80 hover:text-white py-1">Quality</a>
+            <a href="index.html#compare" class="block text-sm text-white/80 hover:text-white py-1">Why Proceze</a>
+            <a href="index.html#cta" class="block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-orange-600 transition mt-2">Get Started</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-cert grid-pattern relative">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-40 min-h-[85vh] flex flex-col justify-center text-center">
+        <div class="inline-flex items-center gap-2 mb-6 justify-center">
+            <div class="w-8 h-8 rounded-lg bg-pz-500/20 flex items-center justify-center"><i class="fas fa-certificate text-pz-500 text-sm"></i></div>
+            <span class="text-sm font-semibold text-pz-500 tracking-wide uppercase">Certification & Standards</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">Your next audit is coming.<br>Are you ready?</h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">Whether it's Lloyd's, TÜV, BSI, or your internal quality team — certification audits demand evidence, traceability and proof that your team actually follows the procedures. Proceze makes that effortless.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base w-full sm:w-auto justify-center">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- THE CHALLENGE -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">The challenge with certification audits</h2>
+        <p class="mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Most companies scramble before an audit. Documents are scattered, evidence is incomplete, procedures exist on paper but nobody follows them. The result? Failed audits, corrective actions, delays and lost contracts.</p>
+        <p class="mt-4 text-base sm:text-lg text-gray-500 leading-relaxed">With Proceze, audit-readiness isn't a project — it's a state. Every procedure execution is logged, every training tracked, every version controlled. When the auditor arrives, you open the system and show them everything.</p>
+    </div>
+</section>
+
+<!-- THE PROCEZE JOURNEY — 6 steps -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">From zero to audit-ready</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Proceze guides you through every step — from mapping your standards to the moment your auditor signs off.</p>
+        </div>
+        <div class="space-y-10 sm:space-y-12">
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-pz-500 flex items-center justify-center text-white font-black text-lg">1</div>
+                <div><h4 class="text-lg font-black text-gray-900">Inventory your standards</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Import your ISO or industry standard. Amy helps you map clauses to the procedures you need.</p></div>
+            </div>
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-pz-500 flex items-center justify-center text-white font-black text-lg">2</div>
+                <div><h4 class="text-lg font-black text-gray-900">Build your procedures</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Create interactive workflows with yes/no questions, photos, measurements, digital signatures. Use templates or build from scratch.</p></div>
+            </div>
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-pz-500 flex items-center justify-center text-white font-black text-lg">3</div>
+                <div><h4 class="text-lg font-black text-gray-900">Execute with your team</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Your team follows procedures step-by-step. Every action is timestamped, logged and traceable to a user.</p></div>
+            </div>
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-pz-500 flex items-center justify-center text-white font-black text-lg">4</div>
+                <div><h4 class="text-lg font-black text-gray-900">Improve continuously</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">CAPAs, change requests and procedure updates are all tracked and version-controlled. Every improvement is documented.</p></div>
+            </div>
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-pz-500 flex items-center justify-center text-white font-black text-lg">5</div>
+                <div><h4 class="text-lg font-black text-gray-900">Maintain full visibility</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Dashboard shows compliance health, open CAPAs, expiring certificates, training gaps — everything an auditor will ask for.</p></div>
+            </div>
+            <div class="step-line flex gap-5 sm:gap-6">
+                <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-green-500 flex items-center justify-center text-white font-black text-lg">6</div>
+                <div><h4 class="text-lg font-black text-gray-900">Audit day — open and show</h4><p class="mt-1.5 text-sm text-gray-500 leading-relaxed">No scrambling, no last-minute prep. Open Proceze, show the auditor your execution records, version history, training logs and CAPA register. Done.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RECOGNIZED CERTIFICATION BODIES -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight leading-tight">Built for audits by</h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-500">Proceze supports the evidence and documentation requirements of all major certification bodies.</p>
+        <div class="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 sm:gap-6">
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">Lloyd's</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">TÜV</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">BSI</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">DNV</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">Bureau Veritas</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">SGS</span></div>
+            <div class="bg-gray-50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2"><i class="fas fa-award text-2xl text-gray-400"></i><span class="text-xs font-bold text-gray-600">Kiwa</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT YOUR AUDITOR SEES -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">What your auditor will see</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Every piece of evidence an auditor needs — generated automatically as your team works.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-pz-500/10 flex items-center justify-center mb-4"><i class="fas fa-list-check text-pz-500"></i></div>
+                <h4 class="text-base font-black text-gray-900">Execution records</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Complete step-by-step execution logs with timestamps, user IDs, answers, photos and signatures.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center mb-4"><i class="fas fa-code-branch text-purple-600"></i></div>
+                <h4 class="text-base font-black text-gray-900">Version history</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Every procedure change is versioned with a full diff — who changed what, when and why.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center mb-4"><i class="fas fa-signature text-green-600"></i></div>
+                <h4 class="text-base font-black text-gray-900">Digital approvals</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">E-signatures and approval workflows with full audit trail — who approved, reviewed and published.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center mb-4"><i class="fas fa-graduation-cap text-amber-600"></i></div>
+                <h4 class="text-base font-black text-gray-900">Training records</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Per-employee qualification profiles showing active, expired and planned certifications.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4"><i class="fas fa-clipboard-list text-red-500"></i></div>
+                <h4 class="text-base font-black text-gray-900">CAPA register</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Full corrective action history — from root cause analysis to effectiveness verification.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4"><i class="fas fa-file-pdf text-pz-500"></i></div>
+                <h4 class="text-base font-black text-gray-900">PDF export</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">One-click export of any procedure, execution record or compliance report as a professional PDF.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="hero-cert grid-pattern relative">
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Pass your next audit with confidence</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Stop scrambling before every audit. Build a system that keeps you audit-ready every single day.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
+            <div class="col-span-2 md:col-span-1">
+                <span class="text-xl font-bold tracking-tight">proceze.</span>
+                <p class="mt-3 text-xs sm:text-sm text-white/50 leading-relaxed">Intelligent compliance & quality workflows for modern teams.</p>
+            </div>
+            <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Product</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
+                    <li><a href="index.html#features" class="text-white/50 hover:text-white transition">Features</a></li>
+                    <li><a href="index.html#amy" class="text-white/50 hover:text-white transition">Amy AI</a></li>
+                    <li><a href="quality.html" class="text-white/50 hover:text-white transition">Quality</a></li>
+                    <li><a href="index.html#compare" class="text-white/50 hover:text-white transition">Why Proceze</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Use Cases</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
+                    <li><a href="use-case-certification.html" class="text-white/50 hover:text-white transition">Certification & Standards</a></li>
+                    <li><a href="use-case-safety.html" class="text-white/50 hover:text-white transition">Safety Management</a></li>
+                    <li><a href="use-case-quality.html" class="text-white/50 hover:text-white transition">Quality Management</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Company</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
+                    <li><a href="#" class="text-white/50 hover:text-white transition">Support</a></li>
+                    <li><a href="#" class="text-white/50 hover:text-white transition">Sales</a></li>
+                    <li><a href="#" class="text-white/50 hover:text-white transition">Contact</a></li>
+                </ul>
+                <h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4 mt-6">Follow us</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a>
+                    <a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-white/40">&copy; 2025 Proceze. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+    document.querySelectorAll('#mobileMenu a').forEach(l => { l.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')); });
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('nav-scrolled', window.scrollY > 80); });
+    const fadeObs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>

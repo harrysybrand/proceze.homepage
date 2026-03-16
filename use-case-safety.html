@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceze — Safety Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'pz': { 500: '#0c7ef5', 600: '#0062d1' }, 'accent': '#F05A28', 'dark': '#0a0a0a' },
+                fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+            }}
+        }
+    </script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+        .hero-safety { background:linear-gradient(160deg,#0a0a0a 0%,#1a0f0a 40%,#1a0a0a 70%,#0a0a0a 100%); position:relative; overflow:hidden; }
+        .hero-safety::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 40% 50%,rgba(240,90,40,.18) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 75% 60%,rgba(234,179,8,.12) 0%,transparent 50%); pointer-events:none; }
+        .hero-safety::after { content:''; position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,#0a0a0a,transparent); pointer-events:none; }
+        .grid-pattern { background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px); background-size:60px 60px; }
+        .nav-header { transition:background .3s ease,border-color .3s ease; }
+        .nav-scrolled { background:rgba(255,255,255,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid #e5e7eb; }
+        .nav-scrolled a:not(.btn-cta) { color:#111!important; }
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+        .mockup-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.06); overflow:hidden; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- NAV -->
+<nav id="mainNav" class="nav-header fixed top-0 w-full z-50 bg-transparent border-b border-transparent">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold text-white tracking-tight">proceze.</a>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="index.html#features" class="text-sm text-white/70 hover:text-white transition">Features</a>
+            <a href="index.html#amy" class="text-sm text-white/70 hover:text-white transition">Amy AI</a>
+            <a href="quality.html" class="text-sm text-white/70 hover:text-white transition">Quality</a>
+            <a href="index.html#compare" class="text-sm text-white/70 hover:text-white transition">Why Proceze</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-orange-600 transition">Get Started <i class="fas fa-chevron-right text-xs"></i></a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-white"><i class="fas fa-bars text-lg"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/10">
+        <div class="px-5 py-4 space-y-3">
+            <a href="index.html#features" class="block text-sm text-white/80 hover:text-white py-1">Features</a>
+            <a href="index.html#amy" class="block text-sm text-white/80 hover:text-white py-1">Amy AI</a>
+            <a href="quality.html" class="block text-sm text-white/80 hover:text-white py-1">Quality</a>
+            <a href="index.html#compare" class="block text-sm text-white/80 hover:text-white py-1">Why Proceze</a>
+            <a href="index.html#cta" class="block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-orange-600 transition mt-2">Get Started</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-safety grid-pattern relative">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-40 min-h-[85vh] flex flex-col justify-center text-center">
+        <div class="inline-flex items-center gap-2 mb-6 justify-center">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center"><i class="fas fa-hard-hat text-amber-400 text-sm"></i></div>
+            <span class="text-sm font-semibold text-amber-400 tracking-wide uppercase">Safety Management</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight">Safety incidents cost more<br>than you think.</h1>
+        <p class="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">One missed safety check can shut down a production line, injure a worker, or cost millions in fines and litigation. Proceze ensures safety procedures are followed every time — and when they're not, the right people know instantly.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="btn-cta inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base w-full sm:w-auto justify-center">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- THE REAL COST -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">The real cost of safety failures</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">Safety incidents don't just hurt people. They destroy productivity, reputation and profitability.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div class="bg-red-50 border border-red-100 rounded-2xl p-6 text-center">
+                <div class="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mx-auto mb-4"><i class="fas fa-bed-pulse text-red-500 text-lg"></i></div>
+                <h4 class="text-base font-black text-red-700">Worker injuries</h4>
+                <p class="mt-2 text-sm text-red-600/70 leading-relaxed">Medical costs, lost work days, insurance premiums and potential lawsuits.</p>
+            </div>
+            <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6 text-center">
+                <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mx-auto mb-4"><i class="fas fa-industry text-amber-600 text-lg"></i></div>
+                <h4 class="text-base font-black text-amber-700">Production stops</h4>
+                <p class="mt-2 text-sm text-amber-600/70 leading-relaxed">One safety incident can shut down an entire line for days or weeks.</p>
+            </div>
+            <div class="bg-purple-50 border border-purple-100 rounded-2xl p-6 text-center">
+                <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mx-auto mb-4"><i class="fas fa-gavel text-purple-600 text-lg"></i></div>
+                <h4 class="text-base font-black text-purple-700">Regulatory fines</h4>
+                <p class="mt-2 text-sm text-purple-600/70 leading-relaxed">Non-compliance with safety regulations results in significant fines and legal consequences.</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 text-center">
+                <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mx-auto mb-4"><i class="fas fa-building text-gray-500 text-lg"></i></div>
+                <h4 class="text-base font-black text-gray-700">Reputation damage</h4>
+                <p class="mt-2 text-sm text-gray-500 leading-relaxed">Safety incidents make headlines. Customer trust and contracts evaporate fast.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW PROCEZE HANDLES SAFETY -->
+<section class="py-16 sm:py-20 md:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">How Proceze handles safety</h2>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 leading-relaxed">From the moment a safety issue is detected to the moment it's resolved — everything is tracked, escalated and closed.</p>
+        </div>
+
+        <!-- Scenario 1: Instant escalation -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center"><i class="fas fa-bolt text-red-500 text-sm"></i></div><span class="text-xs font-bold text-red-500 uppercase tracking-wider">Instant escalation</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Critical failures trigger instant alerts</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">When a safety-critical procedure step fails, Proceze doesn't wait for someone to report it. The system automatically creates a risk escalation, notifies the safety manager, and flags it on the dashboard. No delays, no lost reports.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Automatic risk escalation from procedure failures</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Real-time dashboard visibility for leadership</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Full traceability: who, what, when, where</span></li>
+                </ul>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100 bg-red-50/50 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-exclamation text-white text-xs"></i></div>
+                    <div>
+                        <p class="text-sm font-bold text-red-700">Safety Escalation</p>
+                        <p class="text-xs text-red-500">Triggered 2 minutes ago</p>
+                    </div>
+                </div>
+                <div class="p-4 sm:p-5 space-y-3">
+                    <div class="flex items-center justify-between text-xs"><span class="text-gray-500">Procedure</span><span class="font-semibold text-gray-900">Fire Safety Check</span></div>
+                    <div class="flex items-center justify-between text-xs"><span class="text-gray-500">Failed step</span><span class="font-semibold text-red-600">Step 4 — Emergency exit blocked</span></div>
+                    <div class="flex items-center justify-between text-xs"><span class="text-gray-500">Executed by</span><span class="font-semibold text-gray-900">Mark Kowalski</span></div>
+                    <div class="flex items-center justify-between text-xs"><span class="text-gray-500">Location</span><span class="font-semibold text-gray-900">Building C, Floor 2</span></div>
+                    <div class="flex items-center justify-between text-xs"><span class="text-gray-500">Risk level</span><span class="font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full">Critical</span></div>
+                    <div class="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2">
+                        <div class="w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-bell text-white text-[8px]"></i></div>
+                        <p class="text-xs text-gray-500">Safety manager <span class="font-semibold text-gray-900">Laura de Vries</span> notified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenario 2: Qualification gate -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1 mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100">
+                    <h4 class="text-sm font-bold text-gray-900">Qualification Check</h4>
+                </div>
+                <div class="p-4 sm:p-5">
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-exclamation-triangle text-red-500 text-xs"></i><span class="text-xs font-bold text-red-700">Missing qualifications detected</span></div>
+                        <p class="text-xs text-red-600/70">The following training is expired or missing for this procedure:</p>
+                        <div class="mt-2 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs bg-white p-2 rounded-lg"><span class="text-gray-700">Fire Safety Certificate</span><span class="text-red-600 font-semibold">Expired 12 days ago</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                        <div class="flex items-center gap-2 mb-2"><i class="fas fa-check-circle text-green-500 text-xs"></i><span class="text-xs font-bold text-green-700">Active qualifications</span></div>
+                        <div class="space-y-1.5">
+                            <div class="flex items-center justify-between text-xs bg-white p-2 rounded-lg"><span class="text-gray-700">ISO 9001 Internal Audit</span><span class="text-green-600 font-semibold">Valid until Dec 2025</span></div>
+                            <div class="flex items-center justify-between text-xs bg-white p-2 rounded-lg"><span class="text-gray-700">Equipment Calibration</span><span class="text-green-600 font-semibold">Valid until Mar 2026</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center"><i class="fas fa-user-shield text-amber-600 text-sm"></i></div><span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Qualification gate</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Only qualified people on safety-critical tasks</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Before starting a safety procedure, Proceze checks if the user has the required training and certifications. If something is expired or missing, the system warns them and their manager. No more unqualified workers on critical tasks.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Pre-execution qualification check</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Automatic alerts for expiring safety training</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Manager visibility into team qualifications</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scenario 3: CAPA close-the-loop -->
+        <div class="mt-16 sm:mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center"><i class="fas fa-rotate text-green-600 text-sm"></i></div><span class="text-xs font-bold text-green-600 uppercase tracking-wider">Close the loop</span></div>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">Every safety incident drives real improvement</h3>
+                <p class="mt-3 text-base text-gray-500 leading-relaxed">Safety incidents automatically trigger CAPAs. The structured 6-step workflow ensures every incident is analyzed, corrective actions are taken, procedures are updated, and effectiveness is verified. Nothing falls through the cracks.</p>
+                <ul class="mt-5 space-y-3">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Automatic CAPA creation from safety escalations</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Root cause analysis linked to procedure steps</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 text-sm mt-0.5"></i><span class="text-sm text-gray-600">Effectiveness verification before CAPA closure</span></li>
+                </ul>
+            </div>
+            <div class="mockup-card">
+                <div class="p-4 sm:p-5 border-b border-gray-100 flex items-center justify-between">
+                    <h4 class="text-sm font-bold text-gray-900">CAPA #47 — Emergency Exit Blocked</h4>
+                    <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">In Progress</span>
+                </div>
+                <div class="p-4 sm:p-5">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3"><div class="w-7 h-7 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-white text-[9px]"></i></div><div><p class="text-xs font-semibold text-gray-900">Registration</p><p class="text-[10px] text-gray-400">Completed · Mar 5</p></div></div>
+                        <div class="flex items-center gap-3"><div class="w-7 h-7 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-white text-[9px]"></i></div><div><p class="text-xs font-semibold text-gray-900">Root cause analysis</p><p class="text-[10px] text-gray-400">Storage overflow blocking exit path</p></div></div>
+                        <div class="flex items-center gap-3"><div class="w-7 h-7 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-white text-[9px]"></i></div><div><p class="text-xs font-semibold text-gray-900">Corrective action proposed</p><p class="text-[10px] text-gray-400">Relocate storage, add weekly exit check</p></div></div>
+                        <div class="flex items-center gap-3"><div class="w-7 h-7 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-ellipsis text-white text-[9px]"></i></div><div><p class="text-xs font-semibold text-gray-900">Procedure update & tasks</p><p class="text-[10px] text-amber-600 font-semibold">2 of 3 tasks completed</p></div></div>
+                        <div class="flex items-center gap-3 opacity-40"><div class="w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0"><span class="text-[9px] font-bold text-gray-500">5</span></div><div><p class="text-xs font-semibold text-gray-900">Effectiveness check</p><p class="text-[10px] text-gray-400">Pending</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="py-16 sm:py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">The outcome</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">Companies that digitize safety management with Proceze see measurable improvements across the board.</p>
+        <div class="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
+            <div class="p-6 rounded-2xl bg-green-50 border border-green-100">
+                <p class="text-3xl sm:text-4xl font-black text-green-600">↓ 60%</p>
+                <p class="mt-2 text-sm font-semibold text-green-700">Fewer incident response delays</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-blue-50 border border-blue-100">
+                <p class="text-3xl sm:text-4xl font-black text-pz-500">100%</p>
+                <p class="mt-2 text-sm font-semibold text-pz-600">Traceability on every safety action</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-amber-50 border border-amber-100">
+                <p class="text-3xl sm:text-4xl font-black text-amber-600">↓ 40%</p>
+                <p class="mt-2 text-sm font-semibold text-amber-700">Reduction in recurring safety issues</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="hero-safety grid-pattern relative">
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 py-20 sm:py-28 md:py-36 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">Make safety your strongest asset</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/60 leading-relaxed">Don't wait for the next incident. Build a safety system that prevents problems before they happen.</p>
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html#cta" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3 sm:px-8 sm:py-3.5 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">Get Started <i class="fas fa-chevron-right text-sm"></i></a>
+            <a href="index.html" class="inline-flex items-center gap-2 text-white/60 hover:text-white transition text-sm sm:text-base"><i class="fas fa-arrow-left text-xs"></i> Back to homepage</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
+            <div class="col-span-2 md:col-span-1"><span class="text-xl font-bold tracking-tight">proceze.</span><p class="mt-3 text-xs sm:text-sm text-white/50 leading-relaxed">Intelligent compliance & quality workflows for modern teams.</p></div>
+            <div><h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Product</h4><ul class="space-y-2 text-xs sm:text-sm"><li><a href="index.html#features" class="text-white/50 hover:text-white transition">Features</a></li><li><a href="index.html#amy" class="text-white/50 hover:text-white transition">Amy AI</a></li><li><a href="quality.html" class="text-white/50 hover:text-white transition">Quality</a></li><li><a href="index.html#compare" class="text-white/50 hover:text-white transition">Why Proceze</a></li></ul></div>
+            <div><h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Use Cases</h4><ul class="space-y-2 text-xs sm:text-sm"><li><a href="use-case-certification.html" class="text-white/50 hover:text-white transition">Certification & Standards</a></li><li><a href="use-case-safety.html" class="text-white/50 hover:text-white transition">Safety Management</a></li><li><a href="use-case-quality.html" class="text-white/50 hover:text-white transition">Quality Management</a></li></ul></div>
+            <div><h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4">Company</h4><ul class="space-y-2 text-xs sm:text-sm"><li><a href="#" class="text-white/50 hover:text-white transition">Support</a></li><li><a href="#" class="text-white/50 hover:text-white transition">Sales</a></li><li><a href="#" class="text-white/50 hover:text-white transition">Contact</a></li></ul><h4 class="text-xs sm:text-sm font-semibold text-white/80 mb-3 sm:mb-4 mt-6">Follow us</h4><div class="flex gap-4"><a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a><a href="#" class="text-white/50 hover:text-white transition"><i class="fab fa-twitter text-lg"></i></a></div></div>
+        </div>
+        <div class="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-white/40">&copy; 2025 Proceze. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+    document.querySelectorAll('#mobileMenu a').forEach(l => { l.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')); });
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('nav-scrolled', window.scrollY > 80); });
+    const fadeObs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>

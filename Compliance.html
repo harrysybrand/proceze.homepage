@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceze | Werkprocessen Verbeteren</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        .dropzone {
+            border: 2px dashed #cbd5e1;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+        
+        .dropzone.dragover {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+        
+        .image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 1rem;
+            border-radius: 0.375rem;
+            display: none;
+        }
+
+        .required-attachment {
+            color: #ef4444;
+            font-size: 0.875rem;
+        }
+        
+        .praktijkvoorbeelden-swiper {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(to bottom, #1683c9, #1A91DD);
+        }
+        .praktijkvoorbeelden-swiper .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pill-title {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 100px;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: scale(0.8);
+            opacity: 0.5;
+        }
+        .swiper-slide-active .pill-title {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .praktijkvoorbeelden-swiper .swiper-button-next,
+        .praktijkvoorbeelden-swiper .swiper-button-prev {
+            color: white;
+        }
+        .praktijkvoorbeelden-swiper .swiper-pagination-bullet {
+            background: white;
+        }
+    </style>
+</head>
+<body class="bg-[#1A91DD] text-white">
+    <!-- Navigation -->
+    <nav class="nav-header visible z-50 bg-[#1A91DD]/90 backdrop-blur-sm border-b border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="text-2xl font-bold text-white">Proceze</a>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-gray-200">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sop.html" class="text-white hover:text-white">SOPs</a>
+                    <a href="/audit.html" class="text-white/80 hover:text-white">Audits</a>
+                    <a href="/compliance.html" class="text-white/80 hover:text-white">Compliance</a>
+                    <a href="#contact" class="text-white/80 hover:text-white">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#demo" class="bg-white text-[#1A91DD] px-6 py-2 rounded-full hover:bg-gray-100 transition-all">Demo Aanvragen</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-visible">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute left-[50%] top-[20px] w-[1000px] h-[600px] -translate-x-1/2 bg-white/10 rounded-[100%] blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 overflow-visible">
+            <div class="max-w-3xl mx-auto text-center spotlight-wrapper">
+                <span class="inline-block px-4 py-2 rounded-full bg-white/10 text-white text-sm mb-4" data-aos="fade-up">🚀 Vaarwel Google Docs, Excel en Word</span>
+                <h1 class="hero-title text-3xl md:text-5xl lg:text-6xl text-center mb-6" data-aos="fade-up">
+                    Maak complexe processen <span class="highlight">simpel</span> en <span class="highlight-red">efficiënt</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Van ISO-audits tot veiligheidsinspecties: Proceze maakt elk werkproces overzichtelijk en meetbaar. Geen losse documenten meer, maar één centrale plek voor al je workflows.
+                </p>
+                <div class="hidden md:grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="150">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-2xl">⚡️</span>
+                        </div>
+                        <p class="text-2xl mb-1">60%</p>
+                        <p class="text-sm text-white/80">Sneller dan spreadsheets</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <p class="text-2xl mb-1">100%</p>
+                        <p class="text-sm text-white/80">Consistente werkwijze</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <p class="text-2xl mb-1">24/7</p>
+                        <p class="text-sm text-white/80">Direct inzicht in voortgang</p>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-sm text-white/90 mb-2">Perfect voor complexe processen zoals:</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">ISO 9001 Audits</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">HACCP Controles</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Veiligheidsinspecties</span>
+                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Kwaliteitscontroles</span>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="250">
+                    <a href="#demo" class="bg-[#22c55e] text-white px-8 py-3 rounded-full hover:bg-[#1fab54] transition-all text-center">
+                        Verbeter je werkprocessen
+                    </a>
+                    <a href="#features" class="bg-white/10 text-white px-8 py-3 rounded-full hover:bg-white/20 transition-all text-center">
+                        Bekijk voorbeelden
+                    </a>
+                </div>
+                <div class="spotlight"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-16 bg-gradient-to-b from-[#1683c9] to-[#1A91DD]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">
+                 Digitaliseer je belangrijkste werkprocessen
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-[#22c55e]/20 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Professionele intake gesprekken</h3>
+                    <p class="text-white/90">Geen losse Word documenten meer. Maak gestructureerde gespreksverslagen met uniforme opmaak en automatische follow-ups.</p>
+                </div>
+                <div class="bg-gradient-to-br from-white/15 to-white/5 p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-[#22c55e]/20 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">🚤</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Efficiënte inspecties & audits</h3>
+                    <p class="text-white/90">Vervang je Excel checklists. Plan, voer uit en rapporteer inspecties in één systeem. Van HACCP tot ISO-audits.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-[#22c55e]/20 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Direct Inzicht met Professionele Rapportages</h3>
+                    <p class="text-white/90">Genereer automatisch professionele rapporten van elk proces, ideaal voor interne en klantgerichte documentatie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#1683c9] to-[#1A91DD]"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-white/10 text-white text-sm mb-4" data-aos="fade-up">⚡️ Direct Inzicht</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+                     Van Uitvoering naar Rapport in Real-time
+                </h2>
+                <p class="text-xl text-white/90 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Zie direct hoe uw antwoorden worden omgezet in heldere, professionele rapporten
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                <!-- Actual Workflow Interface -->
+                <div class="relative lg:col-span-3" data-aos="fade-right">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                        <!-- Progress Bar Card -->
+                        <div class="p-6 border-b border-gray-200">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm font-medium text-gray-700">Progress</span>
+                                <span class="text-sm text-gray-600 progress-text">Step 1 of 5</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="workflow-progress bg-[#22c55e] h-2.5 rounded-full transition-all duration-300" style="width: 20%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content Header with Title -->
+                        <div class="bg-white px-6 py-6 border-b border-gray-200">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <!-- Type Pill -->
+                                    <div class="mb-3">
+                                        <span class="workflow-pill inline-flex items-center rounded-md px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800">
+                                            Chapter
+                                        </span>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <h1 class="workflow-title text-xl font-semibold text-gray-900">Veiligheidsprotocollen</h1>
+                                </div>
+                                
+                                <!-- Procedure Title -->
+                                <div class="text-right">
+                                    <h4 class="text-sm font-medium text-gray-500">Maandelijkse Inspectie</h4>
+                                    <span class="text-xs text-gray-400">Audit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs -->
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8 px-6" aria-label="Tabs">
+                                <button onclick="switchTab('antwoord')" class="tab-button whitespace-nowrap border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600" data-tab="antwoord">
+                                    Antwoord
+                                </button>
+                                <button onclick="switchTab('info')" class="tab-button whitespace-nowrap border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:border-gray-300" data-tab="info">
+                                    Informatie
+                                </button>
+                                <button onclick="switchTab('doel')" class="tab-button whitespace-nowrap border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:border-gray-300" data-tab="doel">
+                                    Doel
+                                </button>
+                            </nav>
+                        </div>
+
+                        <!-- Tab Contents -->
+                        <div id="tab-antwoord" class="tab-content active">
+                            <div class="px-6 py-6">
+                                <p class="workflow-content text-gray-700 text-lg mb-6">In dit hoofdstuk behandelen we de veiligheidsprotocollen voor maandelijkse inspecties.</p>
+                                
+                                <!-- Yes/No Buttons (Hidden by default) -->
+                                <div class="yes-no-buttons hidden space-y-4">
+                                    <div class="flex space-x-4">
+                                        <button onclick="handleExclusionAnswer('yes')" class="px-6 py-3 rounded-lg border-2 border-emerald-500 text-emerald-700 hover:bg-emerald-50 font-medium">
+                                            Ja
+                                        </button>
+                                        <button onclick="handleExclusionAnswer('no')" class="px-6 py-3 rounded-lg border-2 border-red-500 text-red-700 hover:bg-red-50 font-medium">
+                                            Nee
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Regular Answer Options -->
+                                <div class="answer-options space-y-4">
+                                    <div class="mt-4">
+                                        <textarea id="answer-input" class="w-full rounded-lg bg-white py-4 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900 min-h-[100px]" placeholder="Extra notities (optioneel)..."></textarea>
+                                    </div>
+                                    <div class="file-upload space-y-2">
+                                        <label class="block text-sm font-medium text-gray-700">Bijlagen toevoegen</label>
+                                        <div class="flex items-center justify-center w-full">
+                                            <label class="flex flex-col w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer hover:bg-gray-50">
+                                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                                    <svg class="w-8 h-8 mb-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                                    </svg>
+                                                    <p class="mb-2 text-sm text-gray-500">
+                                                        <span class="font-semibold">Klik om te uploaden</span> of sleep bestanden hierheen
+                                                    </p>
+                                                    <p class="text-xs text-gray-500">Foto's, PDF's en andere documenten</p>
+                                                </div>
+                                                <input type="file" class="hidden" multiple onchange="handleFile(this.files)" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- File Upload Container -->
+                                <div id="file-upload-container" class="mt-4" style="display: none;">
+                                    <div>
+                                        <input type="file" id="file-input" class="hidden" accept="image/*">
+                                        <label for="file-input" class="block text-sm font-medium text-gray-700">Upload een foto</label>
+                                        <img class="image-preview mx-auto" alt="Preview">
+                                        <p class="required-attachment mt-2">* Foto verplicht als bewijs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-info" class="tab-content hidden">
+                            <div class="px-6 py-6">
+                                <div class="prose max-w-none text-gray-700 text-lg">
+                                    Veiligheidsprotocollen zijn essentieel voor het waarborgen van een veilige werkomgeving. Deze protocollen zijn opgesteld volgens de laatste industriestandaarden.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-doel" class="tab-content hidden">
+                            <div class="px-6 py-6">
+                                <div class="prose max-w-none text-gray-700 text-lg">
+                                    Het doel van deze protocollen is het minimaliseren van risico's en het garanderen van een veilige werkomgeving voor alle betrokkenen.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="border-t border-gray-200 bg-white px-6 py-4">
+                            <div class="flex justify-between items-center">
+                                <button onclick="goToPreviousStep()" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                                    <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Vorige
+                                </button>
+                                <button onclick="goToNextStep()" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#151D48] hover:bg-[#1f2b5b]">
+                                    Volgende
+                                    <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Preview -->
+                <div class="relative lg:col-span-2" data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-xl p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                            
+                                <span class="text-gray-900 font-semibold">Workflow Demo</span>
+                            </div>
+                            <span class="text-[#22c55e] text-sm font-medium">Live Preview</span>
+                        </div>
+
+                        <!-- Report Content -->
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-gray-900 font-medium mb-2">Demo Details</h3>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div>
+                                            <span class="text-gray-600">Type</span>
+                                            <p class="text-gray-900 font-medium">Interactieve Demo</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-gray-600">Datum</span>
+                                            <p class="text-gray-900 font-medium">19 Feb 2025</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-gray-600">Status</span>
+                                            <p class="text-[#22c55e] font-medium">In Uitvoering</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-gray-600">Uitvoerder</span>
+                                            <p class="text-gray-900 font-medium">J. de Vries</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Results -->
+                            <div>
+                                <h3 class="text-gray-900 font-medium mb-2">Resultaten</h3>
+                                <div class="results-list space-y-3">
+                                    <!-- Results will be added here dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOP Applications Section -->
+    <section class="py-24 relative overflow-hidden w-full">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#1683c9] to-[#1A91DD]"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Werkinstructies die mensen écht willen gebruiken</h2>
+                <p class="text-lg text-white/90">Slimme SOPs die stap voor stap begeleiden en automatisch documenteren</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                    <h3 class="text-2xl font-bold text-white mb-4">🎯 Slimme procedures, geen fouten</h3>
+                    <p class="text-lg text-white/90 mb-6">
+                        Werk zonder frustratie. Heldere stappen begeleiden je door elke taak, zodat je nooit hoeft te twijfelen over wat er moet gebeuren. Geen onnodige correcties, geen misverstanden—gewoon goed werk vanaf de eerste keer.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                    <h3 class="text-2xl font-bold text-white mb-4">⚡️ Minimaal tijdsverlies en altijd inzicht</h3>
+                    <p class="text-lg text-white/90 mb-6">
+                        Je hebt geen tijd te verliezen aan dubbel werk of onnodige controles. Elke taak is direct zichtbaar, de voortgang is helder en je weet precies wat de volgende stap is. Minder zoeken, meer gedaan krijgen.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                    <h3 class="text-2xl font-bold text-white mb-4">📊 Krachtige rapportages: altijd bij de hand</h3>
+                    <p class="text-lg text-white/90 mb-6">
+                        Rapportages die zichzelf maken terwijl jij werkt. Geen losse notities of handmatig bijhouden van voortgang. Alles wordt automatisch vastgelegd, zodat je altijd met één klik inzicht hebt in wat er speelt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Praktijkvoorbeelden Section -->
+    <div class="relative bg-gradient-to-t from-[#1683c9] to-[#1A91DD] py-12">
+        <!-- Gradient edges -->
+        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#1A91DD] to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#1A91DD] to-transparent z-10"></div>
+        
+        <div class="overflow-hidden">
+            <div class="flex animate-scroll gap-8 py-4">
+                <!-- First Set -->
+                <div class="flex items-center gap-8 shrink-0">
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">👥</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Klantgesprekken & Intakes</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Uitvoering & Controles</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">📋</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Inspecties & Audits</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🎓</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Training & Onboarding</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Rapportages & Analyses</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🔄</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Procesverbetering</span>
+                    </div>
+                </div>
+
+                <!-- Duplicate for infinite scroll -->
+                <div class="flex items-center gap-8 shrink-0">
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">👥</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Klantgesprekken & Intakes</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Uitvoering & Controles</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">📋</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Inspecties & Audits</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🎓</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Training & Onboarding</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Rapportages & Analyses</span>
+                    </div>
+
+                    <div class="group flex flex-col items-center gap-2">
+                        <div class="rounded-xl bg-white/5 backdrop-blur-sm p-3 ring-1 ring-white/10 transition duration-300 group-hover:bg-white/10 group-hover:ring-white/20">
+                            <span class="text-2xl">🔄</span>
+                        </div>
+                        <span class="text-sm font-medium text-white">Procesverbetering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gradient-to-b from-[#1683c9] to-[#1A91DD] w-full" id="pricing">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+                    🚀 Begin vandaag met verbeteren
+                </h2>
+                <p class="text-lg text-white/90" data-aos="fade-up" data-aos-delay="100">
+                    Kies het plan dat bij je past en start direct. Geen lange implementaties, geen gedoe.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- SOPs -->
+                <div class="bg-white/20 backdrop-blur-sm p-8 rounded-xl border-2 border-white/30 flex flex-col hover:bg-white/25 transition-all" data-aos="fade-up">
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center mb-4">
+                            <span class="text-4xl">📝</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">SOPs</h3>
+                        <div class="text-3xl font-bold mb-2">€85<span class="text-lg font-normal">/mnd</span></div>
+                        <div class="text-sm text-white mb-4 bg-white/10 py-1 px-3 rounded-full inline-block">Bij jaarlijkse betaling</div>
+                        <div class="text-white mb-2 bg-white/10 py-1 px-3 rounded-full inline-block">+ €16 per gebruiker/mnd</div>
+                        <p class="text-white/80 mt-3">Complete SOP management oplossing</p>
+                    </div>
+                    <ul class="space-y-4 text-white/90 flex-grow mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Onbeperkt aantal SOPs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Versiebeheer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Training tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Basis rapportages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Email support</span>
+                        </li>
+                    </ul>
+                    <a href="#demo" class="bg-white text-[#1A91DD] px-6 py-3 rounded-full hover:bg-gray-100 transition-all text-center font-medium">
+                        Demo Aanvragen →
+                    </a>
+                </div>
+
+                <!-- Audits -->
+                <div class="bg-white/20 backdrop-blur-sm p-8 rounded-xl border-2 border-white/30 flex flex-col transform scale-105 md:translate-y-[-10px] hover:bg-white/25 transition-all shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-white text-[#1A91DD] px-4 py-1 rounded-full text-sm font-medium shadow-lg">✨ Meest gekozen</span>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center mb-4">
+                            <span class="text-4xl">🔍</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Audits</h3>
+                        <div class="text-3xl font-bold mb-2">€125<span class="text-lg font-normal">/mnd</span></div>
+                        <div class="text-sm text-white mb-4 bg-white/10 py-1 px-3 rounded-full inline-block">Bij jaarlijkse betaling</div>
+                        <div class="text-white mb-2 bg-white/10 py-1 px-3 rounded-full inline-block">+ €16 per gebruiker/mnd</div>
+                        <p class="text-white/80 mt-3">SOPs + Audit management</p>
+                    </div>
+                    <ul class="space-y-4 text-white/90 flex-grow mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Alles van SOPs, plus:</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Audit planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Geavanceerde vraagtypen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Uitgebreide rapportages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Prioriteit support</span>
+                        </li>
+                    </ul>
+                    <a href="#demo" class="bg-white text-[#1A91DD] px-6 py-3 rounded-full hover:bg-gray-100 transition-all text-center font-medium">
+                        Demo Aanvragen →
+                    </a>
+                </div>
+
+                <!-- Compliance -->
+                <div class="bg-white/20 backdrop-blur-sm p-8 rounded-xl border-2 border-white/30 flex flex-col hover:bg-white/25 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center mb-4">
+                            <span class="text-4xl">⚖️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Compliance</h3>
+                        <div class="text-3xl font-bold mb-2">€185<span class="text-lg font-normal">/mnd</span></div>
+                        <div class="text-sm text-white mb-4 bg-white/10 py-1 px-3 rounded-full inline-block">Bij jaarlijkse betaling</div>
+                        <div class="text-white mb-2 bg-white/10 py-1 px-3 rounded-full inline-block">+ €16 per gebruiker/mnd</div>
+                        <p class="text-white/80 mt-3">Complete compliance oplossing</p>
+                    </div>
+                    <ul class="space-y-4 text-white/90 flex-grow mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Alles van Audits, plus:</span>
+                        </li>
+                        <li class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Wet- en regelgeving koppeling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Compliance rapportages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>24/7 Dedicated support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-white"></i>
+                            <span>Custom integraties</span>
+                        </li>
+                    </ul>
+                    <a href="#demo" class="bg-white text-[#1A91DD] px-6 py-3 rounded-full hover:bg-gray-100 transition-all text-center font-medium">
+                        Demo Aanvragen →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+                    Klaar om uw SOPs te digitaliseren?
+                </h2>
+                <p class="text-lg mb-8 text-white/90" data-aos="fade-up" data-aos-delay="100">
+                    Vraag een demo aan en ontdek hoe Proceze uw SOP management kan stroomlijnen
+                </p>
+                <a href="#demo" class="inline-block bg-[#22c55e] text-white px-8 py-3 rounded-full hover:bg-[#1fab54] transition-all" data-aos="fade-up" data-aos-delay="200">
+                    Maak je processen slimmer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1683c9] text-white py-12 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Proceze</h3>
+                    <p class="text-white/80">Slim werkstroomsysteem voor efficiënte bedrijfsprocessen</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/sop.html" class="text-white hover:text-white">SOPs</a></li>
+                        <li><a href="/audit.html" class="text-white/80 hover:text-white">Audits</a></li>
+                        <li><a href="/compliance.html" class="text-white/80 hover:text-white">Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white">Support</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white">Sales</a></li>
+                        <li><a href="#demo" class="text-white/80 hover:text-white">Demo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Volg ons</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/80 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white/80 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/80">
+                <p>&copy; 2024 Proceze. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('mobile-menu-hidden');
+        });
+
+        // Header scroll behavior
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.nav-header');
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY < lastScrollY || currentScrollY < 50) {
+                header.classList.remove('hidden');
+                header.classList.add('visible');
+            } 
+            else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                header.classList.remove('visible');
+                header.classList.add('hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+        };
+
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+
+    <script>
+        // Example workflow steps
+        const steps = [
+            {
+                type: 'chapter',
+                title: 'Ontdek de kracht en het gemak van Proceze',
+                instruction: 'Ontdek hoe Proceze jouw werkprocessen eenvoudiger en betrouwbaarder maakt. TIP: Klik op de "Informatie" en "Doel" tabs hierboven voor extra uitleg!',
+                info: 'In het Informatie-tabblad vind je extra context over de huidige stap. Hier lees je waarom een vraag belangrijk is, wat er met de antwoorden gebeurt, of welke regels en richtlijnen van toepassing zijn.',
+                purpose: 'Deze stap laat zien waarom elk onderdeel van de workflow belangrijk is. Je ontdekt hoe Proceze structuur biedt en zorgt dat je elke taak snel en efficiënt uitvoert.'
+            },
+            {
+                type: 'instruction',
+                title: 'Instructie Voorbeeld',
+                instruction: 'Bij een instructiestap krijg je duidelijke aanwijzingen over wat er moet gebeuren. Geen vragen, alleen heldere uitleg.',
+                info: 'Een instructiestap helpt ervoor te zorgen dat:\n\n- Iedereen op dezelfde manier werkt\n- Belangrijke stappen niet worden overgeslagen\n- Nieuwe medewerkers snel kunnen starten\n- Kwaliteit consistent blijft',
+                purpose: 'Instructiestappen zorgen voor kennisdeling en standaardisatie. Ze vormen de basis voor een consistent proces en behouden expertise, zelfs als ervaren medewerkers vertrekken.'
+            },
+            {
+                type: 'exclusion',
+                title: 'Slim overslaan wat niet nodig is',
+                instruction: 'Is deze situatie op jou van toepassing?\n\nAls je "Nee" antwoordt, slaan we automatisch alle niet-relevante vervolgstappen over.',
+                info: 'Een uitsluitingsvraag maakt de workflow efficiënter door alleen de relevante stappen te tonen. Zo voorkom je:\n\n- Onnodige vragen\n- Tijdverlies\n- Verwarring door irrelevante informatie',
+                purpose: 'Uitsluitingsvragen stroomlijnen het proces door onnodige stappen over te slaan. Zo blijft de workflow overzichtelijk en gefocust op wat echt nodig is.',
+                skipTo: 7
+            },
+            {
+                type: 'yesno',
+                title: 'Ja/Nee met Acties',
+                instruction: 'Werkt alles volgens specificatie?\n\nBij "Nee" kan automatisch een taak worden aangemaakt of een aandachtspunt worden toegevoegd aan het rapport.',
+                info: 'Ja/Nee-vragen met acties zijn ideaal voor:\n\n- Snelle controles\n- Duidelijke criteria\n- Automatische opvolging\n- Compliance-checks',
+                purpose: 'Deze vragen zorgen ervoor dat problemen direct worden aangepakt. Door acties te koppelen aan antwoorden, garandeer je dat belangrijke kwesties niet blijven liggen.'
+            },
+            {
+                type: 'instruction',
+                title: 'Slim werken met workflows',
+                instruction: 'Workflows in Proceze tonen alleen de relevante stappen en passen zich aan jouw situatie aan.',
+                info: 'Slimme workflows helpen je:\n\n- Snelle en juiste beslissingen te nemen\n- Alleen relevante stappen uit te voeren\n- Belangrijke zaken niet te missen\n- Efficiënt te werken',
+                purpose: 'Slimme workflows maken je werk eenvoudiger door alleen te vragen wat nodig is en direct acties te koppelen aan antwoorden. Zo werk je effectief en zonder onnodige stappen.'
+            },
+            {
+                type: 'open',
+                title: 'Details vastleggen',
+                instruction: 'Noteer je observaties en verplicht  foto\'s of bestanden toe ter onderbouwing.',
+                info: 'Open vragen zijn geschikt voor:\n\n- Gedetailleerde observaties\n- Professionele inzichten\n- Specifieke situaties\n- Onderbouwing van keuzes',
+                purpose: 'Met open vragen leg je waardevolle kennis vast die niet in vaste antwoordopties past. Dit is essentieel voor situaties die om professioneel inzicht vragen.'
+            },
+            {
+                type: 'chapter',
+                title: 'Slimme workflows in Proceze',
+                instruction: 'Je ziet nu hoe Proceze workflows efficiënter en eenvoudiger maakt door relevante stappen te tonen en informatie direct vast te leggen.',
+                info: 'Proceze maakt workflows slim door:\n\n- Alleen relevante vragen te tonen\n- Context te geven wanneer nodig\n- Antwoorden direct te verwerken\n- Automatisch rapporten te genereren',
+                purpose: 'Proceze ondersteunt jou door zich aan te passen aan jouw situatie. Hierdoor kan jij je richten op wat echt belangrijk is: de juiste beslissingen nemen op basis van de juiste informatie.'
+            }
+        ];
+
+        let currentStep = 0;
+
+        function switchTab(tabName) {
+            // Verberg alle tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Toon geselecteerde tab content
+            document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+            
+            // Update tab button stijlen
+            document.querySelectorAll('.tab-button').forEach(button => {
+                if (button.dataset.tab === tabName) {
+                    button.classList.add('border-blue-500', 'text-blue-600');
+                    button.classList.remove('border-transparent', 'text-gray-500');
+                } else {
+                    button.classList.remove('border-blue-500', 'text-blue-600');
+                    button.classList.add('border-transparent', 'text-gray-500');
+                }
+            });
+        }
+
+        function updateStep(addToReport = true) {
+            const step = steps[currentStep];
+            
+            // Update progress
+            const progressText = document.querySelector('.progress-text');
+            const progressBar = document.querySelector('.workflow-progress');
+            progressText.textContent = `Stap ${currentStep + 1} van ${steps.length}`;
+            progressBar.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+
+            // Update content
+            document.querySelector('.workflow-title').textContent = step.title;
+            
+            // Update pill met juiste kleur
+            const pill = document.querySelector('.workflow-pill');
+            pill.textContent = step.type;
+            // Reset alle kleur classes
+            pill.className = 'workflow-pill text-xs font-medium me-2 px-2.5 py-0.5 rounded-full';
+            
+            // Voeg juiste kleur toe
+            switch(step.type) {
+                case 'exclusion':
+                    pill.classList.add('bg-amber-100', 'text-amber-800');
+                    break;
+                case 'open':
+                    pill.classList.add('bg-purple-100', 'text-purple-800');
+                    break;
+                case 'instruction':
+                    pill.classList.add('bg-gray-100', 'text-gray-800');
+                    break;
+                case 'chapter':
+                    pill.classList.add('bg-blue-100', 'text-blue-800');
+                    break;
+            }
+            
+            // Convert \n to <br> for instruction text
+            const instructionContent = step.instruction.replace(/\n/g, '<br>');
+            document.querySelector('.workflow-content').innerHTML = instructionContent;
+
+            // Update tab contents
+            const infoContent = step.info.replace(/\n/g, '<br>');
+            const purposeContent = step.purpose.replace(/\n/g, '<br>');
+            document.querySelector('#tab-info .prose').innerHTML = infoContent;
+            document.querySelector('#tab-doel .prose').innerHTML = purposeContent;
+
+            // Update tab labels based on step type
+            const antwoordTab = document.querySelector('[data-tab="antwoord"]');
+            if (step.type === 'chapter') {
+                antwoordTab.textContent = 'Uitleg';
+            } else if (step.type === 'instruction') {
+                antwoordTab.textContent = 'Instructie';
+            } else {
+                antwoordTab.textContent = 'Antwoord';
+            }
+
+            // Reset naar eerste tab
+            switchTab('antwoord');
+
+            // Toggle UI elements based on type
+            const yesNoButtons = document.querySelector('.yes-no-buttons');
+            const answerOptions = document.querySelector('.answer-options');
+            const answerInput = document.querySelector('#answer-input');
+            const fileUpload = document.querySelector('.file-upload');
+            
+            // Hide both by default
+            yesNoButtons.classList.add('hidden');
+            answerOptions.classList.add('hidden');
+            fileUpload.classList.add('hidden');
+            
+            // Show relevant UI based on type
+            if (step.type === 'exclusion' || step.type === 'yesno') {
+                yesNoButtons.classList.remove('hidden');
+                // Reset button styles
+                const buttons = document.querySelectorAll('.yes-no-buttons button');
+                buttons.forEach(button => {
+                    const isYesButton = button.textContent.trim() === 'Ja';
+                    button.className = `px-6 py-3 rounded-lg border-2 font-medium ${
+                        isYesButton 
+                            ? 'border-emerald-500 text-emerald-700 hover:bg-emerald-50' 
+                            : 'border-red-500 text-red-700 hover:bg-red-50'
+                    }`;
+                });
+            } else if (step.type === 'open') {
+                answerOptions.classList.remove('hidden');
+                fileUpload.classList.remove('hidden');
+                // Reset input en voeg event listener toe
+                if (answerInput) {
+                    answerInput.value = '';
+                    answerInput.oninput = handleOpenAnswer;
+                }
+            }
+
+            // Update results list
+            updateResults(step, addToReport);
+        }
+
+        function updateResults(step, addToReport = true) {
+            if (!addToReport) return;
+            
+            const resultsList = document.querySelector('.results-list');
+            const result = document.createElement('div');
+            
+            // Bepaal de styling op basis van type
+            let cardClass = 'rounded-lg p-3 space-y-2 ';
+            let statusText = '•';  // Subtiele bullet point
+            let statusClass = 'text-gray-400';
+            let pillClass = 'text-xs font-medium px-2.5 py-0.5 rounded-full ';
+            
+            // Bepaal de juiste nummering en indentatie
+            let stepNumber = `${currentStep + 1}.`;
+            let indent = '';
+            
+            // Vertaal type naar Nederlands
+            const typeTranslations = {
+                'chapter': 'hoofdstuk',
+                'instruction': 'instructie',
+                'open': 'open vraag',
+                'exclusion': 'uitsluiting',
+                'yesno': 'ja/nee',
+                'numeric': 'numeriek'
+            };
+            
+            switch(step.type) {
+                case 'chapter':
+                    cardClass += 'bg-blue-50 border border-blue-200';
+                    pillClass += 'bg-blue-100 text-blue-800';
+                    break;
+                case 'exclusion':
+                    cardClass += 'bg-amber-50 border border-amber-200';
+                    pillClass += 'bg-amber-100 text-amber-800';
+                    break;
+                case 'yesno':
+                    cardClass += 'bg-gray-50 border border-gray-200';
+                    pillClass += 'bg-gray-100 text-gray-800';
+                    break;
+                case 'numeric':
+                    cardClass += 'bg-teal-50 border border-teal-200';
+                    pillClass += 'bg-teal-100 text-teal-800';
+                    break;
+                case 'open':
+                    cardClass += 'bg-gray-50';
+                    pillClass += 'bg-purple-100 text-purple-800';
+                    break;
+                case 'instruction':
+                    cardClass += 'bg-gray-50';
+                    pillClass += 'bg-gray-100 text-gray-800';
+                    break;
+            }
+            
+            result.className = `${cardClass} ${indent}`;
+            result.innerHTML = `
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-900 font-medium">${stepNumber} ${step.title}</span>
+                        <span class="${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="${pillClass}">${typeTranslations[step.type]}</span>
+                        ${step.type === 'numeric' ? '<span class="text-xs text-gray-500">Voortgang: 0%</span>' : ''}
+                    </div>
+                </div>
+            `;
+
+            // Als het een vraag is met antwoord mogelijkheid, voeg een antwoord div toe
+            if (step.type === 'open' || step.type === 'exclusion' || step.type === 'yesno' || step.type === 'numeric') {
+                const answerDiv = document.createElement('div');
+                answerDiv.className = 'text-gray-600 text-sm pl-4 answer-text mt-2';
+                
+                if (step.type === 'numeric') {
+                    answerDiv.innerHTML = `
+                        <div class="flex items-center gap-2">
+                            <span class="font-medium">Waarde:</span>
+                            <span>...</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                            <div class="bg-teal-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>
+                    `;
+                } else {
+                    answerDiv.textContent = '...';
+                }
+                
+                result.appendChild(answerDiv);
+            }
+
+            resultsList.appendChild(result);
+        }
+
+        function handleExclusionAnswer(answer) {
+            const step = steps[currentStep];
+            const resultsList = document.querySelector('.results-list');
+            
+            // Update button styles
+            const buttons = document.querySelectorAll('.yes-no-buttons button');
+            buttons.forEach(button => {
+                const isYesButton = button.textContent.trim() === 'Ja';
+                const isSelected = (isYesButton && answer === 'yes') || (!isYesButton && answer === 'no');
+                
+                // Reset to default style
+                button.className = `px-6 py-3 rounded-lg border-2 font-medium ${
+                    isYesButton 
+                        ? 'border-emerald-500 text-emerald-700 hover:bg-emerald-50' 
+                        : 'border-red-500 text-red-700 hover:bg-red-50'
+                }`;
+                
+                // Add selected state
+                if (isSelected) {
+                    if (isYesButton) {
+                        button.className = 'px-6 py-3 rounded-lg border-2 border-emerald-500 bg-emerald-500 text-white font-medium';
+                    } else {
+                        button.className = 'px-6 py-3 rounded-lg border-2 border-red-500 bg-red-500 text-white font-medium';
+                    }
+                }
+            });
+            
+            // Update last result with answer
+            const lastResult = resultsList.lastElementChild;
+            if (lastResult) {
+                const statusSpan = lastResult.querySelector('span:last-child');
+                if (step.type === 'exclusion') {
+                    if (answer === 'yes') {
+                        statusSpan.className = 'text-gray-400';
+                        statusSpan.textContent = 'Doorgaan';
+                        currentStep++;
+                    } else {
+                        statusSpan.className = 'text-gray-400';
+                        statusSpan.textContent = 'Uitgesloten';
+                        // Spring naar de opgegeven stap
+                        if (step.skipTo !== undefined) {
+                            currentStep = step.skipTo - 1;
+                        }
+                    }
+                } else if (step.type === 'yesno') {
+                    if (answer === 'yes') {
+                        statusSpan.className = 'text-gray-400';
+                        statusSpan.textContent = 'Ja';
+                    } else {
+                        // Voor nee antwoord, toon de acties
+                        statusSpan.className = 'flex gap-2';
+                        statusSpan.innerHTML = `
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800">TaskCreated</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800">AttentionReport</span>
+                        `;
+                    }
+                    currentStep++;
+                }
+                updateStep(true);
+            }
+        }
+
+        function handleOpenAnswer(event) {
+            const answer = event.target.value;
+            const currentStep = steps[currentStep];
+            
+            // Check if attachment is required but missing
+            if (currentStep.requiresAttachment) {
+                const preview = document.querySelector('.image-preview');
+                if (preview.style.display === 'none') {
+                    alert('Voeg eerst een foto toe als bewijs.');
+                    return;
+                }
+            }
+            
+            updateResults(currentStep);
+            
+            // Update het antwoord in het rapport
+            const resultsList = document.querySelector('.results-list');
+            const lastResult = resultsList.lastElementChild;
+            if (lastResult) {
+                const answerText = lastResult.querySelector('.answer-text');
+                if (answerText) {
+                    answerText.textContent = answer;
+                }
+                
+                // Als er een bijlage is, voeg deze toe aan het rapport
+                if (currentStep.requiresAttachment) {
+                    const preview = document.querySelector('.image-preview');
+                    if (preview.style.display === 'block') {
+                        const attachmentDiv = document.createElement('div');
+                        attachmentDiv.className = 'mt-2';
+                        const img = document.createElement('img');
+                        img.src = preview.src;
+                        img.className = 'w-24 h-24 object-cover rounded';
+                        attachmentDiv.appendChild(img);
+                        lastResult.appendChild(attachmentDiv);
+                    }
+                }
+            }
+            
+            goToNextStep();
+        }
+
+        function goToNextStep() {
+            if (currentStep < steps.length) {
+                currentStep++;
+                updateStep(true); // Voeg toe aan rapport
+            }
+        }
+
+        function goToPreviousStep() {
+            if (currentStep > 0) {
+                // Verwijder laatste item uit rapport
+                const resultsList = document.querySelector('.results-list');
+                const lastResult = resultsList.lastElementChild;
+                if (lastResult) {
+                    resultsList.removeChild(lastResult);
+                }
+                
+                currentStep--;
+                updateStep(false); // Update UI zonder rapport aan te passen
+            }
+        }
+
+        // Initialize
+        updateStep();
+    </script>
+
+    <script>
+        // File upload handling
+        const fileInput = document.getElementById('file-input');
+        const preview = document.querySelector('.image-preview');
+
+        fileInput.addEventListener('change', (e) => {
+            handleFile(e.target.files[0]);
+        });
+        
+        function handleFile(file) {
+            if (!file || !file.type.startsWith('image/')) {
+                alert('Upload alleen afbeeldingen (.jpg, .png, .gif)');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>
